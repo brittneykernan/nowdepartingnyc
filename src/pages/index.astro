@@ -1,8 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import barcImage from "../assets/theodor-vasile-LSscVPEyQpI-unsplash.jpg";
 import rioImage from "../assets/sebastien-goldberg-Q8KGwGdDsW8-unsplash.jpg";
 import iceImage from "../assets/jonny-auh-z99iWocuDt0-unsplash.jpg";
@@ -13,129 +13,139 @@ import milImage from "../assets/julia-solonina-lZKMFhsPQ30-unsplash.jpg";
 import willImage from "../assets/linmiao-xu-60qA6VQGeyA-unsplash.jpg";
 import sagImage from "../assets/duncan-kidd-_w0ETDhqEBc-unsplash.jpg";
 import florImage from "../assets/gabriela-testa-8Y6-Ewhp2g8-unsplash.jpg";
+import profile from "../assets/profile.jpg";
 ---
 
-<Layout title="Home">
+<Layout title="Home | Now Departing">
 	<main>
-		<h1>Now Departing New York</h1>
-		<p>Travel guides for Millenials, DINKs and Ex-Hipsters</p>
-		<section>
-			<h2>By destination</p>
+		<header>
+			<h1 class="title"><a href="/" title="Home">Now Departing</a></h1>
+			<a class="about" href="/about/" title="about">
+				<Image 
+				src={profile}
+				height="200"
+				alt="About">
+			</a>
+		</header>
+		<section class="full-width-scrollablet">
+			<h2>By destination</h2>
 			<ul>
 				<li>
-					<Image 
-						src={barcImage} 
-						height="900"
-						alt="Casa Battló by Theodor Vasile" 
-					/>
-					<h3>Barcelona</h3>
+					<a href="">
+						<Image
+							src={barcImage}
+							height="900"
+							alt="Casa Battló by Theodor Vasile"
+						/>
+						<h3>Barcelona</h3>
+					</a>
 				</li>
 				<li>
-					<Image 
-						src={rioImage} 
+					<Image
+						src={rioImage}
 						height="900"
-						alt="Rio de Janeiro by Sébastien Goldberg" 
+						alt="Rio de Janeiro by Sébastien Goldberg"
 					/>
 					<h3>Rio de Janeiro</h3>
 				</li>
 				<li>
-					<Image 
-						src={iceImage} 
+					<Image
+						src={iceImage}
 						height="900"
-						alt="Iceland by Jonny Auh" 
+						alt="Iceland by Jonny Auh"
 					/>
 					<h3>Iceland</h3>
 				</li>
 				<li>
-					<Image 
-						src={parImage} 
+					<Image
+						src={parImage}
 						height="900"
-						alt="Paris by Thibault Penin" 
+						alt="Paris by Thibault Penin"
 					/>
 					<h3>Paris</h3>
 				</li>
 				<li>
-					<Image 
-						src={willImage} 
+					<Image
+						src={willImage}
 						height="900"
-						alt="Brooklyn by Linmiao Xu" 
+						alt="Brooklyn by Linmiao Xu"
 					/>
 					<h3>North Williamsburg</h3>
 				</li>
 				<li>
-					<Image 
-						src={costaImage} 
+					<Image
+						src={costaImage}
 						height="900"
-						alt="La Fortuna by Selina Bubendorfer" 
+						alt="La Fortuna by Selina Bubendorfer"
 					/>
 					<h3>Costa Rica</h3>
 				</li>
 				<li>
-					<Image 
-						src={milImage} 
+					<Image
+						src={milImage}
 						height="900"
-						alt="Milan by Julia Solonina" 
+						alt="Milan by Julia Solonina"
 					/>
 					<h3>Italy</h3>
 				</li>
 				<li>
-					<Image 
-						src={swissImage} 
+					<Image
+						src={swissImage}
 						height="900"
-						alt="Switzerland by Bhumil Chheda " 
+						alt="Switzerland by Bhumil Chheda "
 					/>
 					<h3>Switzerland</h3>
 				</li>
 			</ul>
 		</section>
-		<section>
+		<section class="full-width-scrollablet">
 			<h2>By interest</h2>
 			<ul>
 				<li>
-					<Image 
-						src={sagImage} 
+					<Image
+						src={sagImage}
 						height="900"
-						alt="Sagrada Familia by Duncan Kidd" 
+						alt="Sagrada Familia by Duncan Kidd"
 					/>
 					<h3>Architecture</h3>
 				</li>
 				<li>
-					<Image 
-						src={florImage} 
+					<Image
+						src={florImage}
 						height="900"
-						alt="Sagrada Familia by Gabriela Testa" 
+						alt="Sagrada Familia by Gabriela Testa"
 					/>
 					<h3>Flora</h3>
 				</li>
 				<li>
-					<Image 
-						src={sagImage} 
+					<Image
+						src={sagImage}
 						height="900"
-						alt="Sagrada Familia by Duncan Kidd" 
+						alt="Sagrada Familia by Duncan Kidd"
 					/>
 					<h3>Dessert Tours</h3>
 				</li>
 				<li>
-					<Image 
-						src={sagImage} 
+					<Image
+						src={sagImage}
 						height="900"
-						alt="Sagrada Familia by Duncan Kidd" 
+						alt="Sagrada Familia by Duncan Kidd"
 					/>
 					<h3>Fine Dining</h3>
 				</li>
 				<li>
-					<Image 
-						src={sagImage} 
+					<Image
+						src={sagImage}
 						height="900"
-						alt="Sagrada Familia by Duncan Kidd" 
+						alt="Sagrada Familia by Duncan Kidd"
 					/>
 					<h3>Walking Tours</h3>
 				</li>
 				<li>
-					<Image 
-						src={sagImage} 
+					<Image
+						src={sagImage}
 						height="900"
-						alt="Sagrada Familia by Duncan Kidd" 
+						alt="Sagrada Familia by Duncan Kidd"
 					/>
 					<h3>Boutiques</h3>
 				</li>
@@ -148,10 +158,17 @@ import florImage from "../assets/gabriela-testa-8Y6-Ewhp2g8-unsplash.jpg";
 	main {
 		margin: auto;
 		padding: 1rem;
-		width: 800px;
 		max-width: calc(100% - 2rem);
 		font-size: 20px;
 		line-height: 1.6;
+	}
+	header {
+		display: flex;
+		justify-content: space-between;
+	}
+	.full-width-scrollablet {
+		width: 100%;
+		overflow: scroll;
 	}
 	ul {
 		padding-left: 0;
@@ -161,20 +178,44 @@ import florImage from "../assets/gabriela-testa-8Y6-Ewhp2g8-unsplash.jpg";
 	li {
 		margin-right: 5vh;
 	}
-	img {
+	li a {
+		text-decoration: none;
+	}
+	li img {
 		height: 50vh;
 		width: auto;
 		display: block;
-		box-shadow: 1.5rem 1rem 2rem rgba(0,0,0,0.25);
+		box-shadow: 1.5rem 1rem 2rem rgba(0, 0, 0, 0.25);
+	}
+	.title {
+		font-size: 1.4rem;
+		font-weight: 500;
+		margin-top: 0;
+		margin-bottom: 3rem;
+	}
+	.title a {
+		text-decoration: none;
+	}
+	.tagline {
+		font-size: 1rem;
+	}
+	.about img, .about {
+		display: block;
+	}
+	.about img {
+		height: 50px;
+		width: 50px;
+		border-radius: 100%;
 	}
 	h2 {
 		font-weight: normal;
-		font-size: 1rem;
+		font-size: 0.85rem;
 	}
 	h3 {
 		font-weight: 100;
-		margin-top: 0.5rem;
-		font-size: 2rem;
+		margin-top: 1rem;
+		font-size: 3rem;
+		line-height: 1;
 	}
 	/* .astro-a {
 		position: absolute;

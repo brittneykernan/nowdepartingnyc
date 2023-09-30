@@ -52,3 +52,8 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+Credits
+<a target="_blank" href="https://icons8.com/icon/9352/airplane-take-off">Airplane</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+Likes on Upsplash
+<a href="https://www.flaticon.com/free-icons/plane" title="plane icons">Plane icons created by Freepik - Flaticon</a>
