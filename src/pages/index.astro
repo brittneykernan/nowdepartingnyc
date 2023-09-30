@@ -1,0 +1,226 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+
+import { Image } from 'astro:assets';
+import barcImage from "../assets/theodor-vasile-LSscVPEyQpI-unsplash.jpg";
+import rioImage from "../assets/sebastien-goldberg-Q8KGwGdDsW8-unsplash.jpg";
+import iceImage from "../assets/jonny-auh-z99iWocuDt0-unsplash.jpg";
+import costaImage from "../assets/selina-bubendorfer-X3zFdLVQLKE-unsplash.jpg";
+import swissImage from "../assets/bhumil-chheda--h45iGpkkPA-unsplash.jpg";
+import parImage from "../assets/thibault-penin-zj_zOAaT8as-unsplash.jpg";
+import milImage from "../assets/julia-solonina-lZKMFhsPQ30-unsplash.jpg";
+import willImage from "../assets/linmiao-xu-60qA6VQGeyA-unsplash.jpg";
+import sagImage from "../assets/duncan-kidd-_w0ETDhqEBc-unsplash.jpg";
+import florImage from "../assets/gabriela-testa-8Y6-Ewhp2g8-unsplash.jpg";
+---
+
+<Layout title="Home">
+	<main>
+		<h1>Now Departing New York</h1>
+		<p>Travel guides for Millenials, DINKs and Ex-Hipsters</p>
+		<section>
+			<h2>By destination</p>
+			<ul>
+				<li>
+					<Image 
+						src={barcImage} 
+						height="900"
+						alt="Casa Battló by Theodor Vasile" 
+					/>
+					<h3>Barcelona</h3>
+				</li>
+				<li>
+					<Image 
+						src={rioImage} 
+						height="900"
+						alt="Rio de Janeiro by Sébastien Goldberg" 
+					/>
+					<h3>Rio de Janeiro</h3>
+				</li>
+				<li>
+					<Image 
+						src={iceImage} 
+						height="900"
+						alt="Iceland by Jonny Auh" 
+					/>
+					<h3>Iceland</h3>
+				</li>
+				<li>
+					<Image 
+						src={parImage} 
+						height="900"
+						alt="Paris by Thibault Penin" 
+					/>
+					<h3>Paris</h3>
+				</li>
+				<li>
+					<Image 
+						src={willImage} 
+						height="900"
+						alt="Brooklyn by Linmiao Xu" 
+					/>
+					<h3>North Williamsburg</h3>
+				</li>
+				<li>
+					<Image 
+						src={costaImage} 
+						height="900"
+						alt="La Fortuna by Selina Bubendorfer" 
+					/>
+					<h3>Costa Rica</h3>
+				</li>
+				<li>
+					<Image 
+						src={milImage} 
+						height="900"
+						alt="Milan by Julia Solonina" 
+					/>
+					<h3>Italy</h3>
+				</li>
+				<li>
+					<Image 
+						src={swissImage} 
+						height="900"
+						alt="Switzerland by Bhumil Chheda " 
+					/>
+					<h3>Switzerland</h3>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>By interest</h2>
+			<ul>
+				<li>
+					<Image 
+						src={sagImage} 
+						height="900"
+						alt="Sagrada Familia by Duncan Kidd" 
+					/>
+					<h3>Architecture</h3>
+				</li>
+				<li>
+					<Image 
+						src={florImage} 
+						height="900"
+						alt="Sagrada Familia by Gabriela Testa" 
+					/>
+					<h3>Flora</h3>
+				</li>
+				<li>
+					<Image 
+						src={sagImage} 
+						height="900"
+						alt="Sagrada Familia by Duncan Kidd" 
+					/>
+					<h3>Dessert Tours</h3>
+				</li>
+				<li>
+					<Image 
+						src={sagImage} 
+						height="900"
+						alt="Sagrada Familia by Duncan Kidd" 
+					/>
+					<h3>Fine Dining</h3>
+				</li>
+				<li>
+					<Image 
+						src={sagImage} 
+						height="900"
+						alt="Sagrada Familia by Duncan Kidd" 
+					/>
+					<h3>Walking Tours</h3>
+				</li>
+				<li>
+					<Image 
+						src={sagImage} 
+						height="900"
+						alt="Sagrada Familia by Duncan Kidd" 
+					/>
+					<h3>Boutiques</h3>
+				</li>
+			</ul>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	ul {
+		padding-left: 0;
+		display: flex;
+		list-style: none;
+	}
+	li {
+		margin-right: 5vh;
+	}
+	img {
+		height: 50vh;
+		width: auto;
+		display: block;
+		box-shadow: 1.5rem 1rem 2rem rgba(0,0,0,0.25);
+	}
+	h2 {
+		font-weight: normal;
+		font-size: 1rem;
+	}
+	h3 {
+		font-weight: 100;
+		margin-top: 0.5rem;
+		font-size: 2rem;
+	}
+	/* .astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	} */
+</style>
