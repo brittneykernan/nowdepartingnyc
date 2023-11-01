@@ -1,0 +1,164 @@
+---
+import Card from "../components/Card.astro";
+
+import Layout from "../layouts/Layout.astro";
+
+// import barcImage from "../assets/theodor-vasile-LSscVPEyQpI-unsplash.jpg";
+import { LocationMenuImages } from "../data/MenuImages"
+
+const barcImage = LocationMenuImages.barcImage
+---
+
+<Layout title="Barcelona | Now Departing">
+    <main>
+        <Card
+            image={barcImage}
+            height={900}
+            href="/guide"
+            title="Barcelona"
+        />
+        <article>
+            <p class="eyebrow">A travel guide for</p>
+            <h1>Barcelona, Spain</h1>
+            <p class="list-intro">Based on our trip from NYC:</p>
+            <ul>
+                <li><span>Year:</span> 2023</li>
+                <li><span>Month:</span> September</li>
+                <li>
+                    <span>Weather:</span> Mid 60s, high 70s, sunny, light rain
+                </li>
+                <li><span>Duration:</span> 9 days</li>
+                <li><span>Planning Needed:</span> Light</li>
+                <li><span>Travel Mode:</span> Foot, Metro, Train</li>
+                <li><span>Safety:</span> Very safe</li>
+                <li><span>Cost:</span> Moderate</li>
+            </ul>
+            <section>
+                <h4>First Impression</h4>
+                <p>
+                    Barcelona is a unique and stylish place. You're going to
+                    want to leave your inclination to blend in at home. Stop
+                    scouring TikTok for European vacation outfits, and show up
+                    as your bold one-of-a-kind self, like Barcelona does.
+                </p>
+                <h4>What You'll Find</h4>
+                <p>
+                    This is the perfect city to enjoy long strolls, culinary
+                    excellence, art and architecture. <a
+                        href="https://en.wikipedia.org/wiki/History_of_Barcelona"
+                        target="_blank"
+                        rel="noreferrer nofollow noopener">Barcelona's history</a
+                    > is facinating, and there's an interesting mix of
+                    progressive and conservative culture. Folks are friendly,
+                     service is on-point, and we felt safe everywhere we went.
+                </p>
+            </section>
+            <section>
+                <h4>Hot Spots</h4>
+                <p>
+                    We've curated our top picks of shops, restaurants, and
+                    cultural destinations. See our Walking Tours to experience
+                    our favorites.
+                </p>
+                <iframe
+                    width="600"
+                    height="450"
+                    style="border:0"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdYLMcYWLg2polgJA55_ms_Dde9XyMKbQ
+                        &q=Barcelona,Spain"
+                >
+                </iframe>
+            </section>
+        </article>
+        <nav>
+            <h5>In this guide:</h5>
+            <ul>
+                <li><a href="/article/">Cool Boutiques in Barcelona</a></li>
+                <li><a href="">Barcelona's Best Skate Shops</a></li>
+                <li>
+                    <a href="">Curated Book & Magazine Stores in Barcelona</a>
+                </li>
+                <li><a href="">Exceptional Restaurants in Barcelona</a></li>
+                <li><a href="">Must-Try Desserts in Barcelona</a></li>
+                <li>
+                    <a href=""
+                        >A Day in Gothic Quarter, Barcelona, Self-Guided Walking
+                        Tour</a>
+                </li>
+                <li>
+                    <a href=""
+                        >A Day in Eixample, Barcelona, Self-Guided Walking Tour</a>
+                </li>
+                <li>
+                    <a href="">Must See Architecture and Art in Barcelona</a>
+                </li>
+                <li>
+                    <a href="">Top 10 Must-Knows Before You Visit Barcelona</a>
+                </li>
+                <li><a href="">What to Wear in Barcelona In September</a></li>
+            </ul>
+        </nav>
+
+        <!-- <div>
+            <blockquote>
+                <p>"honestly, the style is just as eclectic as in brooklyn just more … euro? i would say, pack what makes you feel cool and fit and you'll look 🔥."</p>
+                <footer>
+                    <cite>Tatiana Peck, Barcelona Born Brooklynite</cite>
+                </footer>
+            </blockquote>
+        </div> -->
+    </main>
+</Layout>
+
+<style>
+    main {
+        display: flex;
+    }
+    article {
+        margin-left: 3rem;
+        max-width: 600px;
+        overflow: scroll;
+    }
+    h1 {
+        font-weight: 200;
+        margin-top: 0;
+        margin-left: -5px;
+    }
+    nav,
+    article {
+        height: calc(100vh - 150px);
+    }
+    nav {
+        max-width: 400px;
+        margin-left: 3rem;
+        overflow: scroll;
+    }
+    aside {
+        /* font-size: 0.85rem; */
+        font-weight: normal;
+        font-style: italic;
+        max-width: 300px;
+    }
+    /* blockquote { */
+        /* border-left: 1px solid #ddd;
+        padding-left: 1rem;
+        margin-right: 0;
+    } */
+    article ul {
+        column-count: 2;
+        margin-bottom: 2.5rem;
+        margin-top: 0;
+    }
+    li span {
+        font-weight: 500;
+    }
+    .eyebrow {
+        margin: 0;
+    }
+    .list-intro {
+        margin-bottom: 17px;
+    }
+</style>
