@@ -3,45 +3,52 @@ import Card from "../components/Card.astro";
 
 import Layout from "../layouts/Layout.astro";
 
-// import barcImage from "../assets/theodor-vasile-LSscVPEyQpI-unsplash.jpg";
 import { LocationMenuImages } from "../data/MenuImages"
 
 const barcImage = LocationMenuImages.barcImage
+const { artistName, url } = barcImage
 ---
 
 <Layout title="Barcelona | Now Departing">
     <main>
-        <Card
-            image={barcImage}
-            height={900}
-            href="/guide"
-            title="Barcelona"
-        />
+        <div>
+            <Card
+                image={barcImage}
+                height={900}
+                href="/guide"
+                title="Barcelona"
+                transitionName="barcelona"
+                hideTitle
+            />
+            { artistName && url &&
+                <small class="imageCredit"><a href={url} target="_blank" rel="nofollow noreferrer noopener">{barcImage.alt}</a></small>
+            }
+        </div>
         <article>
             <p class="eyebrow">A travel guide for</p>
             <h1>Barcelona, Spain</h1>
             <p class="list-intro">Based on our trip from NYC:</p>
             <ul>
-                <li><span>Year:</span> 2023</li>
                 <li><span>Month:</span> September</li>
                 <li>
                     <span>Weather:</span> Mid 60s, high 70s, sunny, light rain
                 </li>
-                <li><span>Duration:</span> 9 days</li>
                 <li><span>Planning Needed:</span> Light</li>
                 <li><span>Travel Mode:</span> Foot, Metro, Train</li>
                 <li><span>Safety:</span> Very safe</li>
                 <li><span>Cost:</span> Moderate</li>
+                <li><span>Duration:</span> 9 days</li>
+                <li><span>Year:</span> 2023</li>
             </ul>
             <section>
-                <h4>First Impression</h4>
+                <h2>First Impression</h4>
                 <p>
                     Barcelona is a unique and stylish place. You're going to
                     want to leave your inclination to blend in at home. Stop
                     scouring TikTok for European vacation outfits, and show up
                     as your bold one-of-a-kind self, like Barcelona does.
                 </p>
-                <h4>What You'll Find</h4>
+                <h2>What You'll Find</h4>
                 <p>
                     This is the perfect city to enjoy long strolls, culinary
                     excellence, art and architecture. <a
@@ -50,31 +57,29 @@ const barcImage = LocationMenuImages.barcImage
                         rel="noreferrer nofollow noopener">Barcelona's history</a
                     > is facinating, and there's an interesting mix of
                     progressive and conservative culture. Folks are friendly,
-                     service is on-point, and we felt safe everywhere we went.
+                     service is on-point and metros are clean.
                 </p>
             </section>
             <section>
-                <h4>Hot Spots</h4>
+                <h2>Hot Spots</h4>
                 <p>
                     We've curated our top picks of shops, restaurants, and
                     cultural destinations. See our Walking Tours to experience
                     our favorites.
                 </p>
                 <iframe
+                    src="https://www.google.com/maps/d/u/0/embed?mid=1os2iIcn02sp3VBhO1XpAFaje79X7hAE&ehbc=2E312F&noprof=1"
                     width="600"
                     height="450"
                     style="border:0"
                     loading="lazy"
                     allowfullscreen
                     referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdYLMcYWLg2polgJA55_ms_Dde9XyMKbQ
-                        &q=Barcelona,Spain"
-                >
-                </iframe>
+                    ></iframe>
             </section>
         </article>
         <nav>
-            <h5>In this guide:</h5>
+            <h3>Coming soon in this guide:</h5>
             <ul>
                 <li><a href="/article/">Cool Boutiques in Barcelona</a></li>
                 <li><a href="">Barcelona's Best Skate Shops</a></li>
@@ -127,6 +132,13 @@ const barcImage = LocationMenuImages.barcImage
         margin-top: 0;
         margin-left: -5px;
     }
+    h2 {
+        margin-top: 45px;
+    } 
+    small {
+        display: block;
+        margin-top: 11px; 
+    }
     nav,
     article {
         height: calc(100vh - 150px);
@@ -149,7 +161,7 @@ const barcImage = LocationMenuImages.barcImage
     } */
     article ul {
         column-count: 2;
-        margin-bottom: 2.5rem;
+        margin-bottom: 63px;
         margin-top: 0;
     }
     li span {
@@ -160,5 +172,9 @@ const barcImage = LocationMenuImages.barcImage
     }
     .list-intro {
         margin-bottom: 17px;
+    }
+    .card-title {
+        font-size: 16px; 
+        line-height: 28px;
     }
 </style>

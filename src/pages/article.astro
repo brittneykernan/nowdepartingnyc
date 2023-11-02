@@ -3,7 +3,9 @@ import Card from "../components/Card.astro";
 
 import Layout from "../layouts/Layout.astro";
 
-import barcImage from "../assets/theodor-vasile-LSscVPEyQpI-unsplash.jpg";
+import { LocationMenuImages } from "../data/MenuImages"
+
+const barcImage = LocationMenuImages.barcImage
 ---
 
 <Layout title="Barcelona | Now Departing">
@@ -12,31 +14,43 @@ import barcImage from "../assets/theodor-vasile-LSscVPEyQpI-unsplash.jpg";
             image={barcImage}
             height={900}
             href="/guide"
-            alt="Casa Battló by Theodor Vasile"
             title="Barcelona"
+            transitionName="barcelona"
         />
         <article>
-            <p class="eyebrow"><a href="/guide">Barcelona, Spain Travel Guide</a></p>
+            <p class="eyebrow">
+                <a href="/guide">Barcelona, Spain Travel Guide</a>
+            </p>
             <h2>What to Wear in Barcelona In September</h2>
-            
+
             <section>
                 <h4>Trip Summary</h4>
                 <p>
                     First off, Barcelona is a stylish place. You're going to
                     want to leave your inclination to blend in at home. Stop
-                    scouring TikTok for European vacation fits and boldly do you, like
-                    Barcelona does it.
+                    scouring TikTok for European vacation fits and boldly do
+                    you, like Barcelona does it.
                 </p>
                 <div class="content-with-quote">
                     <p>
-                        This is the perfect city and season to take long strolls,
-                        enjoy culinary excellence, unrushed,
-                        and let the art and architecture change you a bit. The history is facinating and there's an interesting mix of progressive and conservative culture. Service everywhere was on-point and quite friendly. 
+                        This is the perfect city and season to take long
+                        strolls, enjoy culinary excellence, unrushed, and let
+                        the art and architecture change you a bit. The history
+                        is facinating and there's an interesting mix of
+                        progressive and conservative culture. Service everywhere
+                        was on-point and quite friendly.
                     </p>
                     <blockquote>
-                        <p>"honestly, the style is just as eclectic as in brooklyn just more … euro? i would say, pack what makes you feel cool and fit and you'll look 🔥."</p>
+                        <p>
+                            "honestly, the style is just as eclectic as in
+                            brooklyn just more … euro? i would say, pack what
+                            makes you feel cool and fit and you'll look 🔥."
+                        </p>
                         <footer>
-                            <cite><a href="#">Tatiana Peck</a>, Barcelona Born Brooklynite</cite>
+                            <cite
+                                ><a href="#">Tatiana Peck</a>, Barcelona Born
+                                Brooklynite</cite
+                            >
                         </footer>
                     </blockquote>
                 </div>
@@ -44,18 +58,27 @@ import barcImage from "../assets/theodor-vasile-LSscVPEyQpI-unsplash.jpg";
             <section>
                 <h4>Locations in This Article</h4>
                 <p>
-                    We've curated our top picks of shops, restaurants, and cultural destinations. See our Walking Tours to experience our favorites. 
+                    We've curated our top picks of shops, restaurants, and
+                    cultural destinations. See our Walking Tours to experience
+                    our favorites.
                 </p>
+                <!-- <iframe
+                    width="600"
+                    height="450"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdYLMcYWLg2polgJA55_ms_Dde9XyMKbQ
+                        &q=Barcelona,Spain"
+                >
+                </iframe> -->
                 <iframe
+                    src="https://www.google.com/maps/d/u/0/embed?mid=1os2iIcn02sp3VBhO1XpAFaje79X7hAE&ehbc=2E312F"
                     width="600"
                     height="450"
                     style="border:0"
                     loading="lazy"
                     allowfullscreen
                     referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdYLMcYWLg2polgJA55_ms_Dde9XyMKbQ
-                        &q=Barcelona,Spain">
-                    </iframe>
+                    ></iframe>
             </section>
         </article>
     </main>

@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+    height: number;
+    title: string;
+    transitionName: string;
+    image: {
+        alt: string;
+        src: ImageMetadata;
+    }
+    hideTitle?: boolean;
+}
+
+const { height, hideTitle = false, image : { alt, src}, title, transitionName } = Astro.props;
+
+---
+
+<Image src={src} height={height} alt={alt} transition:name=`${transitionName}-image` />
+<h3 class:list={['card-title', { hide: hideTitle } ]} transition:name=`${transitionName}-title`>{title}</h3>
+
+
+<style>
+    .card-link img {
+        margin-bottom: 0;
+    }
+	.card-title {
+		font-weight: 100;
+		margin-top: 1rem;
+		font-size: 3rem;
+		line-height: 1;
+        margin-left: -5px;
+		display: inline-block;
+	}
+    .card-title.hide {
+        display: none;
+    }
+    img {
+        height: 450px;
+        width: auto;
+        display: block;
+        margin-bottom: 0;
+        box-shadow: 1.5rem 1rem 2rem rgba(0, 0, 0, 0.25);
+        transition: transform 0.5s;
+        -webkit-transition: transform 0.5s;
+        -moz-transition: transform 0.5s;
+        -o-transition: transform 0.5s;
+    }
+</style>

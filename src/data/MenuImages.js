@@ -12,7 +12,7 @@ import florSrc from "../assets/gabriela-testa-8Y6-Ewhp2g8-unsplash.jpg";
 const barcImage = {
 	src: barcSrc,
 	artistName: "Theodor Vasile",
-	url: "https://test.com",
+	url: "https://unsplash.com/photos/brwon-and-black-cathedrla-LSscVPEyQpI",
     alt: "Casa Battló by Theodor Vasile"
 };
 
