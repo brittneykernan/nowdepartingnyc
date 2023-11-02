@@ -10,21 +10,22 @@ interface Props {
         src: ImageMetadata;
     }
     hideTitle?: boolean;
+    comingSoon?: boolean;
 }
 
-const { height, hideTitle = false, image : { alt, src}, title, transitionName } = Astro.props;
+const { comingSoon, height, hideTitle = false, image : { alt, src}, title, transitionName } = Astro.props;
 
 ---
 
-<Image src={src} height={height} alt={alt} transition:name=`${transitionName}-image` />
-<h3 class:list={['card-title', { hide: hideTitle } ]} transition:name=`${transitionName}-title`>{title}</h3>
-
+<Image class:list={[{ comingSoon: comingSoon } ]}  src={src} height={height} alt={alt} transition:name=`${transitionName}-image` />
+<h3 class:list={['card-title', { hide: hideTitle, comingSoon: comingSoon } ]} transition:name=`${transitionName}-title`>{title}</h3>
 
 <style>
-    .card-link img {
-        margin-bottom: 0;
+    .comingSoon {
+        opacity: 0.5;
     }
 	.card-title {
+        opacity: 0.5;
 		font-weight: 100;
 		margin-top: 1rem;
 		font-size: 3rem;

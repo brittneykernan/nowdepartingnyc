@@ -20,17 +20,16 @@ const { comingSoon = false, height, hideTitle = false, href, image, title, trans
 { comingSoon ? 
   <div class:list={[{ comingSoon: comingSoon } ]}>
     <div class="coming-soon-badge">Coming Soon</div>
-    <CardContent image={image} height={height} transitionName={transitionName} hideTitle={hideTitle} title={title} />
+    <CardContent comingSoon={comingSoon} image={image} height={height} transitionName={transitionName} hideTitle={hideTitle} title={title} />
   </div>
 :
   <a href={href} transition:name=`${transitionName}-card` class="card-link">
-    <CardContent image={image} height={height} transitionName={transitionName} hideTitle={hideTitle} title={title} />
+    <CardContent comingSoon={comingSoon} image={image} height={height} transitionName={transitionName} hideTitle={hideTitle} title={title} />
   </a>
 }
 
 <style>
   .comingSoon {
-    opacity: 0.5;
     position: relative;
   }
   .coming-soon-badge {

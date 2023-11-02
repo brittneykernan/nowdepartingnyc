@@ -2,8 +2,9 @@ import { LocationMenuImages } from "./MenuImages";
 
 const barcelona = {
     title: "Barcelona",
-    slug: "guide",
+    slug: "barcelona",
     image: LocationMenuImages.barcImage,
+    comingSoon: false
 };
 
 const rio = {
