@@ -40,38 +40,36 @@ const { title } = Astro.props;
 		gtag('config', 'G-SS7Y3ZEB5P');
 	</script>
 	<body>
-		<div class="container">
-			<header>
-				<h1 class="title">
-					<a href="/" title="Home">Now Departing NYC</a>
-				</h1>
-				<a href="https://www.instagram.com/brittneykernan" rel="noopener nofollow noreferrer" target="_blank" class="about" title="about">
-					<Image src={profile} height="200" alt="About" />
+		<header>
+			<h1 class="title">
+				<a href="/" title="Home">Now Departing NYC</a>
+			</h1>
+			<a href="https://www.instagram.com/brittneykernan" rel="noopener nofollow noreferrer" target="_blank" class="about" title="about">
+				<Image src={profile} height="200" alt="About" />
+			</a>
+		</header>
+		<slot />
+		<footer>
+			<p>&copy; 2023 Brittney Kernan. All Rights Reserved.</p>
+			<p>
+				<a
+					class="social-icon"
+					href="https://www.instagram.com/brittneykernan"
+					target="_blank"
+					rel="nofollow noreferrer noopener"
+				>
+					<InstagramIcon />
 				</a>
-			</header>
-			<slot />
-			<footer>
-				<p>&copy; 2023 Brittney Kernan. All Rights Reserved.</p>
-				<p>
-					<a
-						class="social-icon"
-						href="https://www.instagram.com/brittneykernan"
-						target="_blank"
-						rel="nofollow noreferrer noopener"
-					>
-						<InstagramIcon />
-					</a>
-					<a
-						class="social-icon"
-						href="https://www.tiktok.com/@brittneykernan"
-						target="_blank"
-						rel="nofollow noreferrer noopener"
-					>
-						<TiktokIcon />
-					</a>
-				</p>
-			</footer>
-		</div>
+				<a
+					class="social-icon"
+					href="https://www.tiktok.com/@brittneykernan"
+					target="_blank"
+					rel="nofollow noreferrer noopener"
+				>
+					<TiktokIcon />
+				</a>
+			</p>
+		</footer>
 
 		<style is:global>
 			:root {
@@ -186,17 +184,24 @@ const { title } = Astro.props;
 			}
 		</style>
 		<style>
-			.container {
-				margin: auto;
-				padding: 2rem;
-				max-width: calc(100% - 2rem);
-			}
 			header {
+				padding: 17px 28px 0;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
+				margin-bottom: 17px;
+			}
+			@media screen and (min-width: 768px) {
+				.container {
+					padding;
+				}
+				header {
+					padding-top: 28px;
+					margin-bottom: 45px;
+				}
 			}
 			footer {
+				padding: 0 2rem 2rem;
 				font-size: 13px;
 				line-height: 23px;
 				margin-top: 45px;
@@ -209,11 +214,7 @@ const { title } = Astro.props;
 				font-weight: 500;
 				margin-top: 0;
 				margin-bottom: 3rem;
-			}
-			@media screen and (max-width: 768px) {
-				.title {
-					margin-bottom: 0;
-				}
+				margin-bottom: 0;
 			}
 			.title a {
 				text-decoration: none;

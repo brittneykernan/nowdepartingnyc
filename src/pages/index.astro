@@ -4,14 +4,14 @@ import Card from "../components/Card.astro";
 
 import { LocationMenuItems } from "../data/MenuItems.js";
 
-import { Image } from "astro:assets";
-import sagImage from "../assets/duncan-kidd-_w0ETDhqEBc-unsplash.jpg";
-import florImage from "../assets/gabriela-testa-8Y6-Ewhp2g8-unsplash.jpg";
+// import { Image } from "astro:assets";
+// import sagImage from "../assets/duncan-kidd-_w0ETDhqEBc-unsplash.jpg";
+// import florImage from "../assets/gabriela-testa-8Y6-Ewhp2g8-unsplash.jpg";
 ---
 
 <Layout title="Home | Now Departing">
+	<p>Select destination</p>
 	<section class="full-width-scrollable">
-		<h2>Select destination:</h2>
 		<ul>
 			{LocationMenuItems.map(({image, slug, title, comingSoon }) => (
 				<li>
@@ -87,9 +87,12 @@ import florImage from "../assets/gabriela-testa-8Y6-Ewhp2g8-unsplash.jpg";
 		width: 100%;
 		overflow: scroll;
 	}
+	p {
+		padding-left: 28px;
+	}
 	ul {
 		display: flex;
-		margin-left: 0;
+		margin-top: 0;
 	}
 	li {
 		margin-right: 5vh;
@@ -103,9 +106,8 @@ import florImage from "../assets/gabriela-testa-8Y6-Ewhp2g8-unsplash.jpg";
 		display: block;
 		box-shadow: 1.5rem 1rem 2rem rgba(0, 0, 0, 0.25);
 	}
-	h2 {
-		font-weight: normal;
-		font-size: 1rem;
+	p {
+		margin: 17px 0;
 	}
 	h3 {
 		font-weight: 100;

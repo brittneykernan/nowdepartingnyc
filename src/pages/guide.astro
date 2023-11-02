@@ -27,7 +27,7 @@ const { artistName, url } = barcImage
         <article>
             <p class="eyebrow">A travel guide for</p>
             <h1>Barcelona, Spain</h1>
-            <p class="list-intro">Based on our trip from NYC:</p>
+            <p class="list-intro">Based on our trip from NYC</p>
             <ul>
                 <li><span>Month:</span> September</li>
                 <li>
@@ -64,8 +64,7 @@ const { artistName, url } = barcImage
                 <h2>Hot Spots</h4>
                 <p>
                     We've curated our top picks of shops, restaurants, and
-                    cultural destinations. See our Walking Tours to experience
-                    our favorites.
+                    cultural destinations below. Missed something? DM me.
                 </p>
                 <iframe
                     src="https://www.google.com/maps/d/u/0/embed?mid=1os2iIcn02sp3VBhO1XpAFaje79X7hAE&ehbc=2E312F&noprof=1"
@@ -78,7 +77,7 @@ const { artistName, url } = barcImage
                     ></iframe>
             </section>
         </article>
-        <nav>
+        <!-- <nav>
             <h3>Coming soon in this guide:</h5>
             <ul>
                 <li><a href="/article/">Cool Boutiques in Barcelona</a></li>
@@ -105,7 +104,7 @@ const { artistName, url } = barcImage
                 </li>
                 <li><a href="">What to Wear in Barcelona In September</a></li>
             </ul>
-        </nav>
+        </nav> -->
 
         <!-- <div>
             <blockquote>
@@ -121,12 +120,31 @@ const { artistName, url } = barcImage
 <style>
     main {
         display: flex;
+        flex-direction: column;
+        padding: 0 28px;
     }
+    @media screen and (min-width: 768px) {
+        main {
+            flex-direction: row;
+        }
+    }
+
     article {
-        margin-left: 3rem;
-        max-width: 600px;
-        overflow: scroll;
+        margin-top: 45px;
     }
+    @media screen and (min-width: 768px) {
+        article {
+            margin-top: 0;
+            margin-left: 3rem;
+            max-width: 600px;
+            overflow: scroll;
+        }
+        nav,
+        article {
+            height: calc(100vh - 150px);
+        }
+    }
+
     h1 {
         font-weight: 200;
         margin-top: 0;
@@ -139,10 +157,6 @@ const { artistName, url } = barcImage
         display: block;
         margin-top: 11px; 
     }
-    nav,
-    article {
-        height: calc(100vh - 150px);
-    }
     nav {
         max-width: 400px;
         margin-left: 3rem;
@@ -154,6 +168,14 @@ const { artistName, url } = barcImage
         font-style: italic;
         max-width: 300px;
     }
+    iframe {
+        width: 100%;
+    }
+    @media screen and (min-width: 768px) {
+        iframe {
+            width: 600px;
+        }
+    }
     /* blockquote { */
         /* border-left: 1px solid #ddd;
         padding-left: 1rem;
@@ -163,6 +185,12 @@ const { artistName, url } = barcImage
         column-count: 2;
         margin-bottom: 63px;
         margin-top: 0;
+        margin-left: 0;
+    }
+    @media screen and (min-width: 768px) {
+        article ul {
+            margin-left: ;
+        }
     }
     li span {
         font-weight: 500;
