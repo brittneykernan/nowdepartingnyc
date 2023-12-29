@@ -1,0 +1,49 @@
+---
+import Layout from './Layout.astro';
+import Card from "../components/Card.astro";
+
+import { LocationMenuImages } from "../data/MenuImages"
+
+const { frontmatter : { title, slug, guide }} = Astro.props;
+
+const locationImage = LocationMenuImages[guide]
+const { artistName, url, alt } = locationImage
+
+---
+<Layout title={`${title} | Now Departing NYC`}>
+  <main>
+    <div>
+        <Card
+            image={locationImage}
+            height={900}
+            href=`\${guide}`
+            title={title}
+            transitionName={guide}
+            hideTitle
+        />
+        { artistName && url &&
+            <small class="imageCredit"><a href={url} target="_blank" rel="nofollow noreferrer noopener">{alt}</a></small>
+        }
+    </div>
+    <article class="article">
+        <slot />
+    </article>
+  </main>
+</Layout>
+
+<style>
+    main {
+        display: flex;
+        flex-direction: column;
+        padding: 0 28px;
+    }
+    @media screen and (min-width: 768px) {
+        main {
+            flex-direction: row;
+        }
+    }
+</style>
+<script type="text/javascript">
+    // To open Mardown links in a new tab
+    !function(){for(var e=document.body.getElementsByTagName("a"),t=e.length,n=0;n<t;n++)new URL(e[n].href).origin!==location.origin&&e[n].setAttribute("target","_blank")}();
+</script>

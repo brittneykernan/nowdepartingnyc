@@ -5,15 +5,15 @@ import Layout from "../layouts/Layout.astro";
 
 import { LocationMenuImages } from "../data/MenuImages"
 
-const barcImage = LocationMenuImages.barcImage
-const { artistName, url } = barcImage
+const barcelona = LocationMenuImages.barcelona
+const { artistName, url } = barcelona
 ---
 
-<Layout title="Barcelona | Now Departing">
+<Layout title="Barcelona | Now Departing NYC">
     <main>
         <div>
             <Card
-                image={barcImage}
+                image={barcelona}
                 height={900}
                 href="/barcelona"
                 title="Barcelona"
@@ -21,24 +21,24 @@ const { artistName, url } = barcImage
                 hideTitle
             />
             { artistName && url &&
-                <small class="imageCredit"><a href={url} target="_blank" rel="nofollow noreferrer noopener">{barcImage.alt}</a></small>
+                <small class="imageCredit"><a href={url} target="_blank" rel="nofollow noreferrer noopener">{barcelona.alt}</a></small>
             }
         </div>
-        <article>
+        <article class="article">
             <p class="eyebrow">A travel guide for</p>
             <h1>Barcelona, Spain</h1>
             <p class="list-intro">Based on our trip from NYC</p>
             <ul>
-                <li><span>Month:</span> September</li>
+                <li><strong>Month:</strong> September</li>
                 <li>
-                    <span>Weather:</span> Mid 60s, high 70s, sunny, light rain
+                    <strong>Weather:</strong> Mid 60s, high 70s, sunny, light rain
                 </li>
-                <li><span>Planning Needed:</span> Light</li>
-                <li><span>Travel Mode:</span> Foot, Metro, Train</li>
-                <li><span>Safety:</span> Very safe</li>
-                <li><span>Cost:</span> Moderate</li>
-                <li><span>Duration:</span> 9 days</li>
-                <li><span>Year:</span> 2023</li>
+                <li><strong>Planning Needed:</strong> Light</li>
+                <li><strong>Travel Mode:</strong> Foot, Metro, Train</li>
+                <li><strong>Safety:</strong> Very safe</li>
+                <li><strong>Cost:</strong> Moderate</li>
+                <li><strong>Duration:</strong> 9 days</li>
+                <li><strong>Year:</strong> 2023</li>
             </ul>
             <section>
                 <h2>First Impression</h4>
@@ -129,7 +129,7 @@ const { artistName, url } = barcImage
         }
     }
 
-    article {
+    /* article {
         margin-top: 45px;
     }
     @media screen and (min-width: 768px) {
@@ -148,15 +148,14 @@ const { artistName, url } = barcImage
     h1 {
         font-weight: 200;
         margin-top: 0;
-        margin-left: -5px;
     }
     h2 {
         margin-top: 45px;
     } 
-    small {
+    .imageCredit {
         display: block;
         margin-top: 11px; 
-    }
+    } */
     nav {
         max-width: 400px;
         margin-left: 3rem;
@@ -168,7 +167,7 @@ const { artistName, url } = barcImage
         font-style: italic;
         max-width: 300px;
     }
-    iframe {
+    /* iframe {
         width: 100%;
     }
     @media screen and (min-width: 768px) {
@@ -176,11 +175,7 @@ const { artistName, url } = barcImage
             width: 600px;
         }
     }
-    /* blockquote { */
-        /* border-left: 1px solid #ddd;
-        padding-left: 1rem;
-        margin-right: 0;
-    } */
+    
     article ul {
         column-count: 2;
         margin-bottom: 63px;
@@ -200,9 +195,5 @@ const { artistName, url } = barcImage
     }
     .list-intro {
         margin-bottom: 17px;
-    }
-    .card-title {
-        font-size: 16px; 
-        line-height: 28px;
-    }
+    } */
 </style>

@@ -17,6 +17,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
 ---
 
 <!doctype html>
@@ -106,9 +107,9 @@ const { title } = Astro.props;
 			/* h1 { font-size: 33px; line-height: 53px;  font-weight: 500; margin-top: 45px; margin-bottom: 28px; } */
 			h1 {
 				font-size: 42px;
-				line-height: 66px;
+				line-height: 55px;
 				font-weight: 200;
-				margin-top: 45px;
+				margin-top: 0;
 				margin-bottom: 28px;
 			}
 			h2 {
@@ -131,6 +132,7 @@ const { title } = Astro.props;
 				font-weight: 200;
 				margin-bottom: 7px;
 			}
+
 			h1 + h2,
 			h2 + h3,
 			h2:first-child,
@@ -167,10 +169,10 @@ const { title } = Astro.props;
 				margin-bottom: 11px;
 			}
 			blockquote {
-				line-height: 28px;
+				font-style: italic;
+				border-left: 1px solid #ddd;
+				padding: 0 1rem;
 				color: #828282;
-				padding-left: 17px;
-				border-width: 0 0 0 7px;
 			}
 			sub,
 			sup {
@@ -181,6 +183,63 @@ const { title } = Astro.props;
 			small {
 				font-size: 13px;
 				line-height: 23px;
+			}
+
+			/* markdown article styles */
+
+			.article {
+				margin-top: 45px;
+			}
+			@media screen and (min-width: 768px) {
+				.article {
+					margin-top: 0;
+					margin-left: 3rem;
+					max-width: 600px;
+					overflow: scroll;
+				}
+				nav,
+				.article {
+					height: calc(100vh - 150px);
+				}
+			}
+			.imageCredit {
+				display: block;
+				margin-top: 11px; 
+			}
+			.article p:first-child {
+				margin: 0;
+			}
+			.article h1 {
+				margin-top: 5px;
+			}
+			.article h2 {
+				margin-top: 45px;
+			} 
+			.article ul {
+				column-count: 2;
+				margin-bottom: 63px;
+				margin-top: 0;
+				margin-left: 0;
+			}
+			@media screen and (min-width: 768px) {
+				.article ul {
+					margin-left: ;
+				}
+			}
+			.article ul strong {
+				font-weight: 500;
+			}
+
+			.article iframe {
+				width: 100%;
+			}
+			@media screen and (min-width: 768px) {
+				.article iframe {
+					width: 600px;
+				}
+			}
+			.list-intro {
+				margin-bottom: 17px;
 			}
 		</style>
 		<style>

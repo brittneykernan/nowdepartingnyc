@@ -3,7 +3,7 @@ import { LocationMenuImages } from "./MenuImages";
 const barcelona = {
     title: "Barcelona",
     slug: "barcelona",
-    image: LocationMenuImages.barcImage,
+    image: LocationMenuImages.barcelona,
     comingSoon: false
 };
 

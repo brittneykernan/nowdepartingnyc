@@ -9,7 +9,7 @@ import willSrc from "../assets/linmiao-xu-60qA6VQGeyA-unsplash.jpg";
 import sagSrc from "../assets/duncan-kidd-_w0ETDhqEBc-unsplash.jpg";
 import florSrc from "../assets/gabriela-testa-8Y6-Ewhp2g8-unsplash.jpg";
 
-const barcImage = {
+const barcelona = {
 	src: barcSrc,
 	artistName: "Theodor Vasile",
 	url: "https://unsplash.com/photos/brwon-and-black-cathedrla-LSscVPEyQpI",
@@ -80,7 +80,7 @@ const florImage = {
 };
 
 export const LocationMenuImages = {
-    barcImage,
+    barcelona,
     rioImage,
     iceImage,
     costaImage,
