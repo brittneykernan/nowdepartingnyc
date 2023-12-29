@@ -49,7 +49,9 @@ const { title } = Astro.props;
 				<Image src={profile} height="200" alt="About" />
 			</a>
 		</header>
-		<slot />
+		<main>
+			<slot />
+		</main>
 		<footer>
 			<p>&copy; 2023 Brittney Kernan. All Rights Reserved.</p>
 			<p>
@@ -187,19 +189,23 @@ const { title } = Astro.props;
 
 			/* markdown article styles */
 
+			.left-rail {
+				position: fixed;
+				top: 128px;
+				left: 24px;
+			}
+
 			.article {
 				margin-top: 45px;
 			}
 			@media screen and (min-width: 768px) {
 				.article {
 					margin-top: 0;
-					margin-left: 3rem;
+					margin-left: 330px;
 					max-width: 600px;
-					overflow: scroll;
 				}
 				nav,
 				.article {
-					height: calc(100vh - 150px);
 				}
 			}
 			.imageCredit {
@@ -249,6 +255,11 @@ const { title } = Astro.props;
 				justify-content: space-between;
 				align-items: center;
 				margin-bottom: 17px;
+				position: fixed;
+				top: 0;
+				right: 0;
+				left: 0;
+				z-index: 1;
 			}
 			@media screen and (min-width: 768px) {
 				.container {
@@ -259,6 +270,9 @@ const { title } = Astro.props;
 					margin-bottom: 45px;
 				}
 			}
+			main {
+				margin-top: 128px;
+			}
 			footer {
 				padding: 0 2rem 2rem;
 				font-size: 13px;
@@ -268,6 +282,7 @@ const { title } = Astro.props;
 			footer p {
 				margin: 7px 0;
 			}
+
 			.title {
 				font-size: 1.4rem;
 				font-weight: 500;
