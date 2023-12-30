@@ -11,22 +11,60 @@ const { artistName, url, alt } = locationImage
 
 ---
 <Layout title={`${title} | Now Departing NYC`}>
-    <div class="left-rail">
-        <Card
-            image={locationImage}
-            height={900}
-            href=`\${guide}`
-            title={title}
-            transitionName={guide}
-            hideTitle
-        />
-        { artistName && url &&
-            <small class="imageCredit"><a href={url} target="_blank" rel="nofollow noreferrer noopener">{alt}</a></small>
-        }
-    </div>
-    <article class="article">
-        <slot />
-    </article>
+    <main class="headerOffset">
+        <div class="left-rail">
+            <Card
+                image={locationImage}
+                height={900}
+                href=`\${guide}`
+                title={title}
+                transitionName={guide}
+                hideTitle
+            />
+            { artistName && url &&
+                <small class="imageCredit"><a href={url} target="_blank" rel="nofollow noreferrer noopener">{alt}</a></small>
+            }
+        </div>
+        <article class="article">
+            <slot />
+        </article>
+        <nav class="right-rail">
+            <h3>Coming soon in this guide:</h5>
+            <ul>
+                <li><a href="/article/">Cool Boutiques in Barcelona</a></li>
+                <li><a href="">Barcelona's Best Skate Shops</a></li>
+                <li>
+                    <a href="">Curated Book & Magazine Stores in Barcelona</a>
+                </li>
+                <li><a href="">Exceptional Restaurants in Barcelona</a></li>
+                <li><a href="">Must-Try Desserts in Barcelona</a></li>
+                <li>
+                    <a href=""
+                        >A Day in Gothic Quarter, Barcelona, Self-Guided Walking
+                        Tour</a>
+                </li>
+                <li>
+                    <a href=""
+                        >A Day in Eixample, Barcelona, Self-Guided Walking Tour</a>
+                </li>
+                <li>
+                    <a href="">Must See Architecture and Art in Barcelona</a>
+                </li>
+                <li>
+                    <a href="">Top 10 Must-Knows Before You Visit Barcelona</a>
+                </li>
+                <li><a href="">What to Wear in Barcelona In September</a></li>
+            </ul>
+        </nav> 
+    </main>
+    <!-- <div>
+        <blockquote>
+            <p>"honestly, the style is just as eclectic as in brooklyn just more … euro? i would say, pack what makes you feel cool and fit and you'll look 🔥."</p>
+            <footer>
+                <cite>Tatiana Peck, Barcelona Born Brooklynite</cite>
+            </footer>
+        </blockquote>
+    </div> -->
 </Layout>
 
 <style>
@@ -34,7 +72,6 @@ const { artistName, url, alt } = locationImage
         display: flex;
         flex-direction: column;
         padding: 0 28px;
-        margin-top: 128px;
     }
     @media screen and (min-width: 768px) {
         main {

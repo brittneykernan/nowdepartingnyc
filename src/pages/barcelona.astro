@@ -10,109 +10,74 @@ const { artistName, url } = barcelona
 ---
 
 <Layout title="Barcelona | Now Departing NYC">
-    <div class="left-rail">
-        <Card
-            image={barcelona}
-            height={900}
-            href="/barcelona"
-            title="Barcelona"
-            transitionName="barcelona"
-            hideTitle
-        />
-        { artistName && url &&
-            <small class="imageCredit"><a href={url} target="_blank" rel="nofollow noreferrer noopener">{barcelona.alt}</a></small>
-        }
-    </div>
-    <article class="article">
-        <p class="eyebrow">A travel guide for</p>
-        <h1>Barcelona, Spain</h1>
-        <p class="list-intro">Based on our trip from NYC</p>
-        <ul>
-            <li><strong>Month:</strong> September</li>
-            <li>
-                <strong>Weather:</strong> Mid 60s, high 70s, sunny, light rain
-            </li>
-            <li><strong>Planning Needed:</strong> Light</li>
-            <li><strong>Travel Mode:</strong> Foot, Metro, Train</li>
-            <li><strong>Safety:</strong> Very safe</li>
-            <li><strong>Cost:</strong> Moderate</li>
-            <li><strong>Duration:</strong> 9 days</li>
-            <li><strong>Year:</strong> 2023</li>
-        </ul>
-        <section>
-            <h2>First Impression</h4>
-            <p>
-                Barcelona is a unique and stylish place. You're going to
-                want to leave your inclination to blend in at home. Stop
-                scouring TikTok for European vacation outfits, and show up
-                as your bold one-of-a-kind self, like Barcelona does.
-            </p>
-            <h2>What You'll Find</h4>
-            <p>
-                This is the perfect city to enjoy long strolls, culinary
-                excellence, art and architecture. <a
-                    href="https://en.wikipedia.org/wiki/History_of_Barcelona"
-                    target="_blank"
-                    rel="noreferrer nofollow noopener">Barcelona's history</a
-                > is facinating, and there's an interesting mix of
-                progressive and conservative culture. Folks are friendly,
-                    service is on-point and metros are clean.
-            </p>
-        </section>
-        <section>
-            <h2>Hot Spots</h4>
-            <p>
-                We've curated our top picks of shops, restaurants, and
-                cultural destinations below. Missed something? DM me.
-            </p>
-            <iframe
-                src="https://www.google.com/maps/d/u/0/embed?mid=1os2iIcn02sp3VBhO1XpAFaje79X7hAE&ehbc=2E312F&noprof=1"
-                width="600"
-                height="450"
-                style="border:0"
-                loading="lazy"
-                allowfullscreen
-                referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
-        </section>
-    </article>
-    <!-- <nav>
-        <h3>Coming soon in this guide:</h5>
-        <ul>
-            <li><a href="/article/">Cool Boutiques in Barcelona</a></li>
-            <li><a href="">Barcelona's Best Skate Shops</a></li>
-            <li>
-                <a href="">Curated Book & Magazine Stores in Barcelona</a>
-            </li>
-            <li><a href="">Exceptional Restaurants in Barcelona</a></li>
-            <li><a href="">Must-Try Desserts in Barcelona</a></li>
-            <li>
-                <a href=""
-                    >A Day in Gothic Quarter, Barcelona, Self-Guided Walking
-                    Tour</a>
-            </li>
-            <li>
-                <a href=""
-                    >A Day in Eixample, Barcelona, Self-Guided Walking Tour</a>
-            </li>
-            <li>
-                <a href="">Must See Architecture and Art in Barcelona</a>
-            </li>
-            <li>
-                <a href="">Top 10 Must-Knows Before You Visit Barcelona</a>
-            </li>
-            <li><a href="">What to Wear in Barcelona In September</a></li>
-        </ul>
-    </nav> -->
-
-    <!-- <div>
-        <blockquote>
-            <p>"honestly, the style is just as eclectic as in brooklyn just more … euro? i would say, pack what makes you feel cool and fit and you'll look 🔥."</p>
-            <footer>
-                <cite>Tatiana Peck, Barcelona Born Brooklynite</cite>
-            </footer>
-        </blockquote>
-    </div> -->
+    <main class="headerOffset">
+        <div class="left-rail">
+            <Card
+                image={barcelona}
+                height={900}
+                href="/barcelona"
+                title="Barcelona"
+                transitionName="barcelona"
+                hideTitle
+            />
+            { artistName && url &&
+                <small class="imageCredit"><a href={url} target="_blank" rel="nofollow noreferrer noopener">{barcelona.alt}</a></small>
+            }
+        </div>
+        <article class="article">
+            <p class="eyebrow">A travel guide for</p>
+            <h1>Barcelona, Spain</h1>
+            <p class="list-intro">Based on our trip from NYC</p>
+            <ul>
+                <li><strong>Month:</strong> September</li>
+                <li>
+                    <strong>Weather:</strong> Mid 60s, high 70s, sunny, light rain
+                </li>
+                <li><strong>Planning Needed:</strong> Light</li>
+                <li><strong>Travel Mode:</strong> Foot, Metro, Train</li>
+                <li><strong>Safety:</strong> Very safe</li>
+                <li><strong>Cost:</strong> Moderate</li>
+                <li><strong>Duration:</strong> 9 days</li>
+                <li><strong>Year:</strong> 2023</li>
+            </ul>
+            <section>
+                <h2>First Impression</h4>
+                <p>
+                    Barcelona is a unique and stylish place. You're going to
+                    want to leave your inclination to blend in at home. Stop
+                    scouring TikTok for European vacation outfits, and show up
+                    as your bold one-of-a-kind self, like Barcelona does.
+                </p>
+                <h2>What You'll Find</h4>
+                <p>
+                    This is the perfect city to enjoy long strolls, culinary
+                    excellence, art and architecture. <a
+                        href="https://en.wikipedia.org/wiki/History_of_Barcelona"
+                        target="_blank"
+                        rel="noreferrer nofollow noopener">Barcelona's history</a
+                    > is facinating, and there's an interesting mix of
+                    progressive and conservative culture. Folks are friendly,
+                        service is on-point and metros are clean.
+                </p>
+            </section>
+            <section>
+                <h2>Hot Spots</h4>
+                <p>
+                    We've curated our top picks of shops, restaurants, and
+                    cultural destinations below. Missed something? DM me.
+                </p>
+                <iframe
+                    src="https://www.google.com/maps/d/u/0/embed?mid=1os2iIcn02sp3VBhO1XpAFaje79X7hAE&ehbc=2E312F&noprof=1"
+                    width="600"
+                    height="450"
+                    style="border:0"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+            </section>
+        </article>
+    </main>
 </Layout>
 
 <style>
@@ -120,7 +85,6 @@ const { artistName, url } = barcelona
         display: flex;
         flex-direction: column;
         padding: 0 28px;
-        margin-top: 128px;
     }
     @media screen and (min-width: 768px) {
         main {
@@ -128,11 +92,6 @@ const { artistName, url } = barcelona
         }
     }
 
-    nav {
-        max-width: 400px;
-        margin-left: 3rem;
-        overflow: scroll;
-    }
     aside {
         /* font-size: 0.85rem; */
         font-weight: normal;

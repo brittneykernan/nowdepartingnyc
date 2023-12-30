@@ -49,7 +49,7 @@ const { title } = Astro.props;
 				<Image src={profile} height="200" alt="About" />
 			</a>
 		</header>
-		<main>
+		<div class="headerOffset">
 			<slot />
 		</main>
 		<footer>
@@ -186,13 +186,19 @@ const { title } = Astro.props;
 				font-size: 13px;
 				line-height: 23px;
 			}
+			@media screen and (min-width: 768px) {
+				.headerOffset {
+					margin-top: 128px;
+				}
+			}
 
 			/* markdown article styles */
-
-			.left-rail {
-				position: fixed;
-				top: 128px;
-				left: 24px;
+			@media screen and (min-width: 768px) {
+				.left-rail {
+					position: fixed;
+					top: 128px;
+					left: 24px;
+				}
 			}
 
 			.article {
@@ -204,9 +210,16 @@ const { title } = Astro.props;
 					margin-left: 330px;
 					max-width: 600px;
 				}
-				nav,
+				.right-rail,
 				.article {
 				}
+			}
+			.right-rail {
+				max-width: 400px;
+				overflow: scroll;
+				position: fixed;
+				top: 128px;
+				right: 24px;
 			}
 			.imageCredit {
 				display: block;
@@ -250,12 +263,11 @@ const { title } = Astro.props;
 		</style>
 		<style>
 			header {
-				padding: 17px 28px 0;
+				padding: 17px 28px;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
 				margin-bottom: 17px;
-				position: fixed;
 				top: 0;
 				right: 0;
 				left: 0;
@@ -266,12 +278,11 @@ const { title } = Astro.props;
 					padding;
 				}
 				header {
+					position: fixed;
 					padding-top: 28px;
+					padding-bottom: 0px;
 					margin-bottom: 45px;
 				}
-			}
-			main {
-				margin-top: 128px;
 			}
 			footer {
 				padding: 0 2rem 2rem;
