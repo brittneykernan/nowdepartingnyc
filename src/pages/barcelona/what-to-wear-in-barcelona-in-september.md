@@ -71,10 +71,5 @@ Wear your jewelry, as Barcelona is a safe city, but, of course, keep it understa
 
 <!-- ## Where to Shop in Barcelona
 
-Do leave room in your suitcase for clothing to buy in Barcelona. There are so many great shops, organized in [Where to Shop In Barcelona](#). -->
+Do leave room in your suitcase for clothing to buy in Barcelona. There are so many great shops, organized in [Cool Boutiques in Barcelona](/cool-boutiques-in-barcelona). -->
 
-### Thanks for reading
-
-If you have corrections or suggestions, please DM me on social (links below). 
-
-I hope you find our recommendations useful. Our travel guides are meant to help folks like [us](/about), somewhat bougie millennial DINKs living in Brooklyn, and our friends find relevant and useful travel information quickly. 

@@ -11,17 +11,18 @@ interface Props {
     }
     hideTitle?: boolean;
     comingSoon?: boolean;
+    responsive?: boolean;
 }
 
-const { comingSoon, height, hideTitle = false, image : { alt, src}, title, transitionName } = Astro.props;
+const { comingSoon, height, hideTitle = false, image : { alt, src}, title, transitionName, responsive = false } = Astro.props;
 
 ---
 
-<Image class:list={[{ comingSoon: comingSoon } ]}  src={src} height={height} alt={alt} transition:name=`${transitionName}-image` />
+<Image class:list={[{ 'coming-soon': comingSoon, responsive } ]}  src={src} height={height} alt={alt} transition:name=`${transitionName}-image` />
 <h3 class:list={['card-title', { hide: hideTitle, comingSoon: comingSoon } ]} transition:name=`${transitionName}-title`>{title}</h3>
 
 <style>
-    .comingSoon {
+    .coming-soon {
         opacity: 0.5;
     }
 	.card-title {
@@ -37,8 +38,6 @@ const { comingSoon, height, hideTitle = false, image : { alt, src}, title, trans
         display: none;
     }
     img {
-        /* height: auto;
-        width: 100%; */
         height: 450px;
         width: auto;
         display: block;
@@ -49,9 +48,15 @@ const { comingSoon, height, hideTitle = false, image : { alt, src}, title, trans
         -moz-transition: transform 0.5s;
         -o-transition: transform 0.5s; */
     }
+    .responsive {
+        height: auto;
+        width: 100%;
+    }
     @media screen and (min-width: 768px) {
+        .responsive,
         img {
             height: 450px;
+            max-height: calc(100vh - 128px - 166px);
             width: auto;
         }
     }

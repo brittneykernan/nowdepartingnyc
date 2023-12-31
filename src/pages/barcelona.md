@@ -41,8 +41,8 @@ excellence, art and architecture. [Barcelona's history](https://en.wikipedia.org
 
 ## Hot Spots
 
-We've curated our top picks of shops, restaurants, and
-cultural destinations below. Missed something? DM me.
+We've curated our top picks of boutiques, restaurants, 
+cultural destinations, skate shops, book and music stores, coffee and dessert shops in Barcelona below.
 
 <iframe
 src="https://www.google.com/maps/d/u/0/embed?mid=1os2iIcn02sp3VBhO1XpAFaje79X7hAE&ehbc=2E312F&noprof=1"

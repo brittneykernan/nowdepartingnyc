@@ -9,8 +9,8 @@ import { Image } from "astro:assets";
 import { ViewTransitions } from "astro:transitions";
 
 import profile from "../assets/profile.jpg";
-import InstagramIcon from "../components/InstagramIcon.astro";
-import TiktokIcon from "../components/TiktokIcon.astro";
+import InstagramLink from "../components/InstagramLink.astro";
+import TikTokLink from "../components/TikTokLink.astro";
 
 interface Props {
 	title: string;
@@ -55,22 +55,8 @@ const { title } = Astro.props;
 		<footer>
 			<p>&copy; 2023 Brittney Kernan. All Rights Reserved.</p>
 			<p>
-				<a
-					class="social-icon"
-					href="https://www.instagram.com/brittneykernan"
-					target="_blank"
-					rel="nofollow noreferrer noopener"
-				>
-					<InstagramIcon />
-				</a>
-				<a
-					class="social-icon"
-					href="https://www.tiktok.com/@brittneykernan"
-					target="_blank"
-					rel="nofollow noreferrer noopener"
-				>
-					<TiktokIcon />
-				</a>
+				<InstagramLink />
+				<TikTokLink />
 			</p>
 		</footer>
 
@@ -141,9 +127,6 @@ const { title } = Astro.props;
 			h3:first-child {
 				margin-top: 0;
 			}
-			h3:first-child {
-				font-weight: 500;
-			}
 			p,
 			ul,
 			ol,
@@ -205,21 +188,30 @@ const { title } = Astro.props;
 				margin-top: 45px;
 			}
 			@media screen and (min-width: 768px) {
-				.article {
+				.article, 
+				.right-rail {
 					margin-top: 0;
 					margin-left: 330px;
 					max-width: 600px;
 				}
-				.right-rail,
-				.article {
-				}
 			}
 			.right-rail {
-				max-width: 400px;
-				overflow: scroll;
-				position: fixed;
-				top: 128px;
-				right: 24px;
+			}
+			@media screen and (min-width: 768px) {
+			}
+			@media screen and (min-width: 1260px) {
+				.right-rail {
+					width: calc(100% - 270px - 600px - 24px - 60px - 60px);
+					max-width: 400px;
+					overflow: scroll;
+					position: fixed;
+					top: 128px;
+					right: 24px;
+				}
+
+			}
+			.guide-nav ul {
+				margin-left: 0;
 			}
 			.imageCredit {
 				display: block;

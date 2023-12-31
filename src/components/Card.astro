@@ -12,19 +12,29 @@ interface Props {
   }
   hideTitle?: boolean;
   comingSoon?: boolean;
+  responsive?: boolean;
 }
 
-const { comingSoon = false, height, hideTitle = false, href, image, title, transitionName } = Astro.props;
+const { comingSoon = false, height, hideTitle = false, href, image, title, transitionName, responsive } = Astro.props;
+const contentProps = {
+  comingSoon,
+  image,
+  height,
+  transitionName,
+  hideTitle,
+  title,
+  responsive
+}
 
 ---
 { comingSoon ? 
   <div class:list={[{ comingSoon: comingSoon } ]}>
     <div class="coming-soon-badge">Coming Soon</div>
-    <CardContent comingSoon={comingSoon} image={image} height={height} transitionName={transitionName} hideTitle={hideTitle} title={title} />
+    <CardContent {...contentProps} />
   </div>
 :
-  <a href={href} transition:name=`${transitionName}-card` class="card-link">
-    <CardContent comingSoon={comingSoon} image={image} height={height} transitionName={transitionName} hideTitle={hideTitle} title={title} />
+  <a href={href} transition:name={`${transitionName}-card`} class="card-link">
+    <CardContent  {...contentProps} />
   </a>
 }
 
