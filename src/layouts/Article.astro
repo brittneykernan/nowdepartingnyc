@@ -4,12 +4,16 @@ import Card from "../components/Card.astro";
 
 import { LocationMenuImages } from "../data/MenuImages"
 import InstagramLink from "../components/InstagramLink.astro";
-import TiktokLink from "../components/TiktokLink.astro";
+import TiktokLink from "../components/TikTokLink.astro";
 
 const { frontmatter : { title, slug, guide }} = Astro.props;
 
 const locationImage = LocationMenuImages[guide]
 const { artistName, url, alt } = locationImage
+
+const postPath = `/src/pages/${guide}/`;
+const allPosts = await Astro.glob(`../**/*.md`);
+const postsInGuide = allPosts.filter(post => post.file.includes(postPath));
 
 ---
 <Layout title={`${title} | Now Departing NYC`}>
@@ -36,38 +40,20 @@ const { artistName, url, alt } = locationImage
                 <InstagramLink />
                 <TiktokLink />.
             </p>
-            <p>I hope you find our recommendations useful. Our travel guides are meant to assist folks with similar interest and tastes as <a href="/about">us</a>, somewhat bougie, somewhat thrifty millennial DINKs with Brooklyn quality expectations, find relevant and useful travel information in one place.</p>
+            <p>I hope you find our recommendations useful. Our travel guides are meant to assist folks with similar interests and tastes as my husband and I, somewhat bougie, somewhat thrifty millennial DINKs with Brooklyn quality expectations, to find relevant travel information in one place.</p>
         </article>
-        <nav class="right-rail">
-            <div class="guide-nav">
-                <h3>In this guide to <a href="/barcelona">Barcelona, Spain</a>:</h5>
-                <ul>
-                    <li><a href="/barcelona/what-to-wear-in-barcelona-in-september">What to Wear in Barcelona In September</a></li>
-                    <li><a href="/article/">Cool Boutiques in Barcelona</a></li>
-                    <li><a href="">Barcelona's Best Skate Shops</a></li>
-                    <li>
-                        <a href="">Curated Book & Magazine Stores in Barcelona</a>
-                    </li>
-                    <li><a href="">Exceptional Restaurants in Barcelona</a></li>
-                    <li><a href="">Must-Try Desserts in Barcelona</a></li>
-                    <li>
-                        <a href=""
-                            >A Day in Gothic Quarter, Barcelona, Self-Guided Walking
-                            Tour</a>
-                    </li>
-                    <li>
-                        <a href=""
-                            >A Day in Eixample, Barcelona, Self-Guided Walking Tour</a>
-                    </li>
-                    <li>
-                        <a href="">Must See Architecture and Art in Barcelona</a>
-                    </li>
-                    <li>
-                        <a href="">Top 10 Must-Knows Before You Visit Barcelona</a>
-                    </li>
-                </ul>
-            </div>
-        </nav> 
+        { postsInGuide && 
+            <nav class="right-rail">
+                <div class="guide-nav">
+                    <h3>In this guide</h5>
+                    <ul>
+                        {postsInGuide.map( ( { url, frontmatter: { title }}) => ( 
+                            <li><a href={url}>{title}</a></li>
+                        ))}
+                    </ul>
+                </div>
+            </nav>
+        }
     </main>
 </Layout>
 

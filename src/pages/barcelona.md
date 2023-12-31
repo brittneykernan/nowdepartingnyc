@@ -32,17 +32,17 @@ Based on our trip from NYC
 Barcelona is a unique and stylish place. You're going to
 want to leave your inclination to blend in at home. Stop
 scouring TikTok for European vacation outfits, and show up
-as your bold one-of-a-kind self, like Barcelona does.
+as your bold one-of-a-kind self, as Barcelona does.
 
 ## What You'll Find
                 
 This is the perfect city to enjoy long strolls, culinary
-excellence, art and architecture. [Barcelona's history](https://en.wikipedia.org/wiki/History_of_Barcelona) is facinating, and there's an interesting mix of progressive and conservative culture. Folks are friendly, service is on-point and metros are clean.
+excellence, art, and architecture. [Barcelona's history](https://en.wikipedia.org/wiki/History_of_Barcelona) is fascinating, and there's an interesting mix of progressive and conservative culture. Folks are friendly, service is on-point and metros are clean.
 
 ## Hot Spots
 
 We've curated our top picks of boutiques, restaurants, 
-cultural destinations, skate shops, book and music stores, coffee and dessert shops in Barcelona below.
+cultural destinations, skate shops, book and music stores, and coffee and dessert shops in Barcelona below.
 
 <iframe
 src="https://www.google.com/maps/d/u/0/embed?mid=1os2iIcn02sp3VBhO1XpAFaje79X7hAE&ehbc=2E312F&noprof=1"

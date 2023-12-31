@@ -57,3 +57,16 @@ Credits
 <a target="_blank" href="https://icons8.com/icon/9352/airplane-take-off">Airplane</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 Likes on Upsplash
 <a href="https://www.flaticon.com/free-icons/plane" title="plane icons">Plane icons created by Freepik - Flaticon</a>
+
+## Todo Blog Posts
+
+* Cool Boutiques in Barcelona
+* Barcelona's Best Skate Shops
+* Curated Book & Magazine Stores in Barcelona
+* Exceptional Restaurants in Barcelona
+* Must-Try Desserts in Barcelona
+* A Day in Gothic Quarter, Barcelona, Self-Guided Walking Tour
+* A Day in Eixample, Barcelona, Self-Guided Walking Tour
+* Must See Architecture and Art in Barcelona
+* Top 10 Must-Knows Before You Visit Barcelona
+

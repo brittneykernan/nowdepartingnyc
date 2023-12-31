@@ -11,6 +11,7 @@ import { ViewTransitions } from "astro:transitions";
 import profile from "../assets/profile.jpg";
 import InstagramLink from "../components/InstagramLink.astro";
 import TikTokLink from "../components/TikTokLink.astro";
+import PlaneIcon from "../components/PlaneIcon.astro";
 
 interface Props {
 	title: string;
@@ -43,7 +44,7 @@ const { title } = Astro.props;
 	<body>
 		<header>
 			<h1 class="title">
-				<a href="/" title="Home">Now Departing NYC</a>
+				<a href="/" title="Home">Now Departing NYC <PlaneIcon /></a>
 			</h1>
 			<a href="https://www.instagram.com/brittneykernan" rel="noopener nofollow noreferrer" target="_blank" class="about" title="about">
 				<Image src={profile} height="200" alt="About" />
@@ -53,7 +54,7 @@ const { title } = Astro.props;
 			<slot />
 		</main>
 		<footer>
-			<p>&copy; 2023 Brittney Kernan. All Rights Reserved.</p>
+			<p>&copy; 2024 Brittney Kernan. All Rights Reserved.</p>
 			<p>
 				<InstagramLink />
 				<TikTokLink />
@@ -169,6 +170,12 @@ const { title } = Astro.props;
 				font-size: 13px;
 				line-height: 23px;
 			}
+
+			header svg {
+				height: 16px;
+				width: auto;
+			}
+
 			@media screen and (min-width: 768px) {
 				.headerOffset {
 					margin-top: 128px;
