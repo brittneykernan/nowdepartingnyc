@@ -1,9 +1,12 @@
 ---
 import InstagramIcon from "../components/InstagramIcon.astro";
+import { AppConfig } from "../utils/AppConfig";
+
+const url = AppConfig.instagram
 ---
 <a
 class="social-icon"
-href="https://www.instagram.com/brittneykernan"
+href={url}
 target="_blank"
 rel="nofollow noreferrer noopener"
 ><InstagramIcon /></a>

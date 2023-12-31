@@ -1,9 +1,12 @@
 ---
 import TikTokIcon from "./TikTokIcon.astro";
+import { AppConfig } from "../utils/AppConfig";
+
+const url = AppConfig.tiktok
 ---
 <a
 	class="social-icon"
-	href="https://www.tiktok.com/@brittneykernan"
+	href={url}
 	target="_blank"
 	rel="nofollow noreferrer noopener"
 ><TikTokIcon /></a>

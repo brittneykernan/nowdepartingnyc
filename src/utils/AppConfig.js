@@ -8,4 +8,6 @@ export const AppConfig = {
   email: 'brittneykernan@gmail.com',
   locale_region: 'en-us',
   locale: 'en',
+  instagram: 'https://www.instagram.com/brittneykernan',
+  tiktok: 'https://www.tiktok.com/@brittneykernan'
 };
