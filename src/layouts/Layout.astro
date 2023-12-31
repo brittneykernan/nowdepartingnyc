@@ -9,8 +9,6 @@ import { Image } from "astro:assets";
 import { ViewTransitions } from "astro:transitions";
 
 import profile from "../assets/profile.jpg";
-import InstagramLink from "../components/InstagramLink.astro";
-import TikTokLink from "../components/TikTokLink.astro";
 import PlaneIcon from "../components/PlaneIcon.astro";
 
 interface Props {
@@ -52,14 +50,7 @@ const { title } = Astro.props;
 		</header>
 		<div class="headerOffset">
 			<slot />
-		</main>
-		<footer>
-			<p>&copy; 2024 Brittney Kernan. All Rights Reserved.</p>
-			<p>
-				<InstagramLink />
-				<TikTokLink />
-			</p>
-		</footer>
+		</div>
 
 		<style is:global>
 			:root {
@@ -172,7 +163,7 @@ const { title } = Astro.props;
 			}
 
 			header svg {
-				height: 16px;
+				height: 14px;
 				width: auto;
 			}
 
@@ -198,7 +189,7 @@ const { title } = Astro.props;
 				.article, 
 				.right-rail {
 					margin-top: 0;
-					margin-left: 330px;
+					margin-left: calc(22vw + 24px + 20px);
 					max-width: 600px;
 				}
 			}
@@ -208,7 +199,7 @@ const { title } = Astro.props;
 			}
 			@media screen and (min-width: 1260px) {
 				.right-rail {
-					width: calc(100% - 270px - 600px - 24px - 60px - 60px);
+					width: calc(100% - 22vw - 600px - 24px - 60px - 60px);
 					max-width: 400px;
 					overflow: scroll;
 					position: fixed;
@@ -283,18 +274,9 @@ const { title } = Astro.props;
 					margin-bottom: 45px;
 				}
 			}
-			footer {
-				padding: 0 2rem 2rem;
-				font-size: 13px;
-				line-height: 23px;
-				margin-top: 45px;
-			}
-			footer p {
-				margin: 7px 0;
-			}
 
 			.title {
-				font-size: 1.4rem;
+				font-size: 1.3rem;
 				font-weight: 500;
 				margin-top: 0;
 				margin-bottom: 3rem;

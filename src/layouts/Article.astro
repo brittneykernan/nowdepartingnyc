@@ -3,6 +3,7 @@ import Layout from './Layout.astro';
 import Card from "../components/Card.astro";
 
 import { LocationMenuImages } from "../data/MenuImages"
+import FooterContent from "../components/FooterContent.astro";
 import InstagramLink from "../components/InstagramLink.astro";
 import TiktokLink from "../components/TikTokLink.astro";
 
@@ -11,7 +12,7 @@ const { frontmatter : { title, slug, guide }} = Astro.props;
 const locationImage = LocationMenuImages[guide]
 const { artistName, url, alt } = locationImage
 
-const postPath = `/src/pages/${guide}/`;
+const postPath = `/src/pages/${guide}`;
 const allPosts = await Astro.glob(`../**/*.md`);
 const postsInGuide = allPosts.filter(post => post.file.includes(postPath));
 
@@ -42,8 +43,8 @@ const postsInGuide = allPosts.filter(post => post.file.includes(postPath));
             </p>
             <p>I hope you find our recommendations useful. Our travel guides are meant to assist folks with similar interests and tastes as my husband and I, somewhat bougie, somewhat thrifty millennial DINKs with Brooklyn quality expectations, to find relevant travel information in one place.</p>
         </article>
-        { postsInGuide && 
-            <nav class="right-rail">
+        <nav class="right-rail">
+            { postsInGuide && 
                 <div class="guide-nav">
                     <h3>In this guide</h5>
                     <ul>
@@ -52,8 +53,11 @@ const postsInGuide = allPosts.filter(post => post.file.includes(postPath));
                         ))}
                     </ul>
                 </div>
-            </nav>
-        }
+            }
+            <footer>
+                <FooterContent />
+            </footer>
+        </nav>
     </main>
 </Layout>
 
@@ -62,6 +66,9 @@ const postsInGuide = allPosts.filter(post => post.file.includes(postPath));
         display: flex;
         flex-direction: column;
         padding: 0 28px;
+    }
+    footer {
+        margin-top: 45px;
     }
 </style>
 <script type="text/javascript">
