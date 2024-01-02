@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets";
+
+import PlaneIcon from "../components/PlaneIcon.astro";
+
+import profile from "../assets/profile.jpg";
+---
+<header>
+	<h1 class="title">
+		<a href="/" title="Home">
+            Now Departing NYC
+            <PlaneIcon height="14" />
+        </a>
+	</h1>
+	<a href="https://www.instagram.com/brittneykernan" rel="noopener nofollow noreferrer" target="_blank" class="about" title="about">
+		<Image src={profile} height="200" alt="About" />
+	</a>
+</header>
+<style>
+    header {
+        padding: 17px 28px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 17px;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+    }
+    @media screen and (min-width: 768px) {
+        header {
+            position: fixed;
+            padding-top: 28px;
+            padding-bottom: 0px;
+            margin-bottom: 45px;
+        }
+    }
+
+    .title {
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        margin-bottom: 0;
+    }
+    .title a {
+        text-decoration: none;
+    }
+    .title:hover PlaneIcon {
+        transform: translate(10px, 10px)
+    }
+
+    .about img,
+    .about {
+        display: block;
+    }
+    .about img {
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        margin-bottom: 0;
+    }
+</style>

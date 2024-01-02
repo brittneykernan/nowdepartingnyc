@@ -1,13 +1,13 @@
-import barcSrc from "../assets/theodor-vasile-LSscVPEyQpI-unsplash.jpg";
-import rioSrc from "../assets/sebastien-goldberg-Q8KGwGdDsW8-unsplash.jpg";
-import iceSrc from "../assets/jonny-auh-z99iWocuDt0-unsplash.jpg";
-import costaSrc from "../assets/selina-bubendorfer-X3zFdLVQLKE-unsplash.jpg";
-import swissSrc from "../assets/bhumil-chheda--h45iGpkkPA-unsplash.jpg";
-import parSrc from "../assets/thibault-penin-zj_zOAaT8as-unsplash.jpg";
-import milSrc from "../assets/julia-solonina-lZKMFhsPQ30-unsplash.jpg";
-import willSrc from "../assets/linmiao-xu-60qA6VQGeyA-unsplash.jpg";
-import sagSrc from "../assets/duncan-kidd-_w0ETDhqEBc-unsplash.jpg";
-import florSrc from "../assets/gabriela-testa-8Y6-Ewhp2g8-unsplash.jpg";
+import barcSrc from "../assets/barcelona-2x.jpg";
+import rioSrc from "../assets/rio-de-janeiro-2x.jpg";
+import iceSrc from "../assets/iceland-2x.jpg";
+import costaSrc from "../assets/costa-rica-2x.jpg";
+import swissSrc from "../assets/switzerland-2x.jpg";
+import parSrc from "../assets/paris-2x.jpg";
+import milSrc from "../assets/italy-2x.jpg";
+import willSrc from "../assets/brooklyn-2x.jpg";
+import sagSrc from "../assets/sagra-familia-2x.jpg";
+import florSrc from "../assets/jargim-2x.jpg";
 
 const barcelona = {
 	src: barcSrc,
