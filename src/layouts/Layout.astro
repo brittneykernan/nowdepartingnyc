@@ -180,13 +180,13 @@ const { title } = Astro.props;
 				.article, 
 				.right-rail {
 					margin-top: 0;
-					margin-left: calc(var(--left-rail-width) + var(--padding-x) + var(--padding-x));
+					margin-left: calc(var(--left-rail-width) + var(--padding-x));
 					max-width: var(--main-width);
 				}
 			}
 			@media screen and (min-width: 1260px) {
 				.right-rail {
-					width: calc(100% - var(--left-rail-width) - var(--main-width) - var(--padding-x) - var(--padding-x) - var(--padding-x));
+					width: calc(100% - var(--padding-x) - var(--left-rail-width) - var(--padding-x) - var(--main-width) - var(--padding-x) - var(--padding-x));
 					max-width: 400px;
 					overflow: scroll;
 					position: fixed;
