@@ -16,6 +16,8 @@ const postPath = `/src/pages/${guide}`;
 const allPosts = await Astro.glob(`../**/*.md`);
 const postsInGuide = allPosts.filter(post => post.file.includes(postPath));
 
+const guideHref = `\\${guide}`;
+
 ---
 <Layout title={`${title} | Now Departing NYC`}>
     <main class="headerOffset">
@@ -23,7 +25,7 @@ const postsInGuide = allPosts.filter(post => post.file.includes(postPath));
             <Card
                 image={locationImage}
                 height={900}
-                href=`\${guide}`
+                href={guideHref}
                 title={title}
                 transitionName={guide}
                 hideTitle

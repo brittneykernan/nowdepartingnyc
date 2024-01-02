@@ -26,9 +26,11 @@ const contentProps = {
   responsive
 }
 
+console.log(href)
+
 ---
 { comingSoon ? 
-  <div class:list={[{ comingSoon: comingSoon } ]}>
+  <div class:list={[{ 'coming-soon': comingSoon } ]}>
     <div class="coming-soon-badge">Coming Soon</div>
     <CardContent {...contentProps} />
   </div>
@@ -39,7 +41,7 @@ const contentProps = {
 }
 
 <style>
-  .comingSoon {
+  .coming-soon {
     position: relative;
   }
   .coming-soon-badge {
@@ -59,7 +61,7 @@ const contentProps = {
     line-height: 23px;
     rotate: 15deg;
   }
-  .comingSoon:hover .coming-soon-badge {
+  .coming-soon:hover .coming-soon-badge {
     opacity: 1;
   }
 	.card-link {
