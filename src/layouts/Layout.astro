@@ -166,6 +166,7 @@ const { title } = Astro.props;
 			/* markdown article styles */
 			@media screen and (min-width: 768px) {
 				.left-rail {
+					width: var(--left-rail-width);
 					position: fixed;
 					top: var(--header-height);
 					left: var(--padding-x);
@@ -173,7 +174,7 @@ const { title } = Astro.props;
 			}
 
 			.article {
-				margin-top: 45px;
+				margin-top: var(space-xl);
 			}
 			@media screen and (min-width: 768px) {
 				.article, 
@@ -208,7 +209,7 @@ const { title } = Astro.props;
 				margin-top: 5px;
 			}
 			.article h2 {
-				margin-top: 45px;
+				margin-top: var(--space-xl);
 			} 
 			.article ul {
 				column-count: 2;

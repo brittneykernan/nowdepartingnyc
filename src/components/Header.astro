@@ -9,7 +9,9 @@ import profile from "../assets/profile.jpg";
 	<h1 class="title">
 		<a href="/" title="Home">
             Now Departing NYC
-            <PlaneIcon height="14" />
+            <span class="icon">
+                <PlaneIcon height="14" />
+            </span>
         </a>
 	</h1>
 	<a href="https://www.instagram.com/brittneykernan" rel="noopener nofollow noreferrer" target="_blank" class="about" title="about">
@@ -18,7 +20,7 @@ import profile from "../assets/profile.jpg";
 </header>
 <style>
     header {
-        padding: 17px 50px;
+        padding: var(--space-m) var(--space-l);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -31,10 +33,12 @@ import profile from "../assets/profile.jpg";
     @media screen and (min-width: 768px) {
         header {
             position: fixed;
-            padding-top: 28px;
-            padding-bottom: 0px;
-            margin-bottom: 45px;
+            padding: var(--space-l) var(--space-xl) 0;
+            margin-bottom: var(--space-xl);
         }
+    }
+    .icon {
+        margin-left: var(--space-xxs)
     }
 
     .title {
@@ -56,8 +60,8 @@ import profile from "../assets/profile.jpg";
         display: block;
     }
     .about img {
-        height: 50px;
-        width: 50px;
+        height: var(--space-xl);
+        width: var(--space-xl);
         border-radius: 100%;
         margin-bottom: 0;
     }

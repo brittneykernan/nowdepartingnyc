@@ -16,8 +16,6 @@ A travel guide for
 
 # Barcelona, Spain
 
-Based on our trip from NYC
-
 * **Month:**  September
 * **Weather:** Mid 60s, high 70s, sunny, light rain
 * **Planning Needed:** Light
