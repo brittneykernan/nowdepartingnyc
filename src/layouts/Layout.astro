@@ -47,22 +47,25 @@ const { title } = Astro.props;
 		<style is:global>
 			:root {
 				--body-copy: #333;
-				--accent: 136, 58, 234;
-				--accent-light: 224, 204, 250;
-				--accent-dark: 49, 10, 101;
-				--accent-gradient: linear-gradient(
-					45deg,
-					rgb(var(--accent)),
-					rgb(var(--accent-light)) 30%,
-					white 60%
-				);
+				--padding-x: var(--space-xl);
+				--header-height: 128px;
+				--main-width: 600px;
+				--left-rail-width: 22vw;
+
+				/** From Golden Ratio CSS from https://grtcalculator.com/ */
+				--space-xl: 45px;
+				--space-l: 28px;
+				--space-m: 17px;
+				--space-s: 11px;
+				--space-xs: 7px;
+				--space-xxs: 4px;
 			}
 			html {
 				font-family: "Montserrat", sans-serif;
 				background: #fefefe;
 				color: var(--body-copy);
 				font-size: 16px;
-				line-height: 28px;
+				line-height: var(--space-l);
 			}
 			body {
 				margin: 0;
@@ -74,35 +77,35 @@ const { title } = Astro.props;
 				padding-left: 0;
 				list-style: none;
 			}
-
-			/** Golden Ratio CSS from https://grtcalculator.com/ */
-			/* h1 { font-size: 33px; line-height: 53px;  font-weight: 500; margin-top: 45px; margin-bottom: 28px; } */
+	
+			/** From Golden Ratio CSS from https://grtcalculator.com/ */
+			/* h1 { font-size: 33px; line-height: 53px;  font-weight: 500; margin-top: 45px; margin-bottom: var(--space-l); } */
 			h1 {
 				font-size: 42px;
 				line-height: 55px;
-				font-weight: 200;
+				font-weight: 300;
 				margin-top: 0;
-				margin-bottom: 28px;
+				margin-bottom: var(--space-l);
 			}
 			h2 {
 				font-size: 26px;
 				line-height: 42px;
-				font-weight: 200;
-				margin-top: 45px;
-				margin-bottom: 17px;
+				font-weight: 300;
+				margin-top:  var(--space-xl);
+				margin-bottom: var(--space-m);
 			}
 			h3 {
 				font-size: 20px;
 				line-height: 33px;
-				font-weight: 200;
-				margin-top: 28px;
-				margin-bottom: 11px;
+				font-weight: 300;
+				margin-top:  var(--space-l);
+				margin-bottom:  var(--space-s);
 			}
 			h4 {
 				font-size: 16px;
-				line-height: 28px;
-				font-weight: 200;
-				margin-bottom: 7px;
+				line-height: var(--space-l);
+				font-weight: 300;
+				margin-bottom: var(--space-xs);
 			}
 
 			h1 + h2,
@@ -120,22 +123,22 @@ const { title } = Astro.props;
 			.callout,
 			.caption,
 			.footnotes {
-				margin-bottom: 28px;
+				margin-bottom: var(--space-l);
 			}
 			ul,
 			ol {
-				margin-left: 28px;
+				margin-left: var(--space-l);
 			}
 			ul ul,
 			ul ol,
 			ol ul,
 			ol ol {
-				margin-top: 11px;
+				margin-top: var(--space-s);
 				margin-bottom: 0;
-				margin-left: 17px;
+				margin-left: var(--space-m);
 			}
 			li {
-				margin-bottom: 11px;
+				margin-bottom: var(--space-s);
 			}
 			blockquote {
 				font-style: italic;
@@ -156,7 +159,7 @@ const { title } = Astro.props;
 
 			@media screen and (min-width: 768px) {
 				.headerOffset {
-					margin-top: 128px;
+					margin-top: var(--header-height);
 				}
 			}
 
@@ -164,8 +167,8 @@ const { title } = Astro.props;
 			@media screen and (min-width: 768px) {
 				.left-rail {
 					position: fixed;
-					top: 128px;
-					left: 24px;
+					top: var(--header-height);
+					left: var(--padding-x);
 				}
 			}
 
@@ -176,22 +179,18 @@ const { title } = Astro.props;
 				.article, 
 				.right-rail {
 					margin-top: 0;
-					margin-left: calc(22vw + 24px + 20px);
-					max-width: 600px;
+					margin-left: calc(var(--left-rail-width) + var(--padding-x) + var(--padding-x));
+					max-width: var(--main-width);
 				}
-			}
-			.right-rail {
-			}
-			@media screen and (min-width: 768px) {
 			}
 			@media screen and (min-width: 1260px) {
 				.right-rail {
-					width: calc(100% - 22vw - 600px - 24px - 60px - 60px);
+					width: calc(100% - var(--left-rail-width) - var(--main-width) - var(--padding-x) - var(--padding-x) - var(--padding-x));
 					max-width: 400px;
 					overflow: scroll;
 					position: fixed;
-					top: 128px;
-					right: 24px;
+					top: var(--header-height);
+					right: var(--padding-x);
 				}
 
 			}
@@ -200,7 +199,7 @@ const { title } = Astro.props;
 			}
 			.imageCredit {
 				display: block;
-				margin-top: 11px; 
+				margin-top: var(--space-s); 
 			}
 			.article p:first-child {
 				margin: 0;
@@ -231,11 +230,11 @@ const { title } = Astro.props;
 			}
 			@media screen and (min-width: 768px) {
 				.article iframe {
-					width: 600px;
+					width:  var(--main-width);
 				}
 			}
 			.list-intro {
-				margin-bottom: 17px;
+				margin-bottom: var(--space-m);
 			}
 		</style>
 		<style>
@@ -248,7 +247,7 @@ const { title } = Astro.props;
 				font-size: 1rem;
 			}
 			.social-icon {
-				margin-right: 7px;
+				margin-right: var(--space-xs);
 			}
 		</style>
 	</body>

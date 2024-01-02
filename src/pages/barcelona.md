@@ -56,4 +56,4 @@ referrerpolicy="no-referrer-when-downgrade"
 
 ## Where to Start
 
-Perhaps start with [What to Wear in Barcelona In September](/what-to-wear-in-barcelona-in-september) if you're a woman traveling around September. See the list to the right for more.
+Perhaps start with [What to Wear in Barcelona In September](/barcelona/what-to-wear-in-barcelona-in-september) if you're a woman traveling around September. See the list to the right for more.
