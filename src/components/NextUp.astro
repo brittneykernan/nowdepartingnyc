@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+
+const { image, description, title} = Astro.props;
+---
+<h2>Next Up</h5>
+<a class="link" href="#">
+    <Image class="image" {...image} />
+    <div class="content">
+        <h3 class="title">{title}</h3>
+        <p class="description">{description}</p>
+    </div>
+</a>
+<style>
+    .link {
+        display: flex;
+        gap: var(--space-m);
+        text-decoration: none;
+        justify-content: center;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xs);
+        justify-content: center;
+    }
+    .image {
+        height: 100px;
+        width: auto;
+        margin-bottom: 0;
+    }
+    .title {
+        margin: 0;
+        text-decoration: underline;
+    }
+    .description {
+        margin: 0
+    }
+</style>

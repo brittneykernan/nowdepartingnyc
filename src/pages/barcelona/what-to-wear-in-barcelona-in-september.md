@@ -2,6 +2,7 @@
 layout: ../../layouts/Article.astro
 title: 'What to Wear in Barcelona In September'
 slug: 'what-to-wear-in-barcelona-in-september'
+urlPath: '/barcelona/what-to-wear-in-barcelona-in-september'
 guide: 'barcelona'
 pubDate: '2023-09-01'
 description: 'Some fit tips for semi-bougie women millenials living in NYC, who will be traveling to Barcelona in the month of September.'

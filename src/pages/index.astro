@@ -14,13 +14,14 @@ import Footer from "../components/Footer.astro";
 	<p>Travel with me to</p>
 	<section class="full-width-scrollable">
 		<ul>
-			{LocationMenuItems.map(({image, slug, title, comingSoon }) => (
+			{LocationMenuItems.map(({image, slug, title, subtitle, comingSoon }) => (
 				<li>
 					<Card
 						image={image}
 						height={900}
 						href={`/${slug}`}
 						title={title}
+						subtitle={subtitle}
 						transitionName={slug}
 						comingSoon={comingSoon}
 					/>

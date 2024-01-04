@@ -1,13 +1,16 @@
 ---
 import { Image } from "astro:assets";
 
-const { comingSoon, height, hideTitle = false, image : { alt, src}, title, transitionName } = Astro.props;
+const { comingSoon, height, hideTitle = false, image : { alt, src}, title, subtitle, transitionName } = Astro.props;
 
 ---
 
 <div class:list={[{ 'coming-soon': comingSoon } ]} >
     <Image src={src} height={height} alt={alt} transition:name=`${transitionName}-image` />
-    <h3 class:list={['card-title', { hide: hideTitle, comingSoon: comingSoon } ]} transition:name=`${transitionName}-title`>{title}</h3>
+        <h3 class:list={['card-title', { hide: hideTitle, comingSoon: comingSoon } ]} transition:name=`${transitionName}-title`>
+            {title},
+            <span class="card-subtitle">{subtitle}</span>
+        </h3>
 </div>
 
 <style>
@@ -15,15 +18,22 @@ const { comingSoon, height, hideTitle = false, image : { alt, src}, title, trans
         opacity: 0.5;
     }
 	.card-title {
-		font-size: 3rem;
-        font-weight: 200;
-		line-height: 1;
-        margin-left: -5px;
-		display: inline-block;
+        margin: var(--space-l) 0 0;
+        display: flex;
+        flex-direction: column;
+        font-size: var(--font-xl);
+        line-height: var(--line-l);
+        font-weight: 300;
 	}
     .card-title.hide {
         display: none;
     }
+    .card-subtitle {
+        font-size: var(--font-s);
+        line-height: var(--line-s);
+        font-weight: 500;
+    }
+    
     img {
         height: auto;
         width: 100%;

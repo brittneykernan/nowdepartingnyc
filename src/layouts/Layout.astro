@@ -59,12 +59,26 @@ const { title } = Astro.props;
 				--space-s: 11px;
 				--space-xs: 7px;
 				--space-xxs: 4px;
+				
+				--font-xl: 42px;
+				--font-l: 26px;
+				--font-m: 20px;
+				--font-s: 16px;
+				--font-xs: 13px;
+				--font-xxs: 11px;
+				
+				--line-xl: 55px;
+				--line-l: var(--font-xl);
+				--line-m: 33px;
+				--line-s: var(--space-l);
+				--line-xs: 23px;
+				--line-xxs: var(--space-s);
 			}
 			html {
 				font-family: "Montserrat", sans-serif;
 				background: #fefefe;
 				color: var(--body-copy);
-				font-size: 16px;
+				font-size: var(--font-s);
 				line-height: var(--space-l);
 			}
 			body {
@@ -81,28 +95,28 @@ const { title } = Astro.props;
 			/** From Golden Ratio CSS from https://grtcalculator.com/ */
 			/* h1 { font-size: 33px; line-height: 53px;  font-weight: 500; margin-top: 45px; margin-bottom: var(--space-l); } */
 			h1 {
-				font-size: 42px;
-				line-height: 55px;
+				font-size: var(--font-xl);
+				line-height: var(--font-xl);
 				font-weight: 300;
 				margin-top: 0;
 				margin-bottom: var(--space-l);
 			}
 			h2 {
-				font-size: 26px;
-				line-height: 42px;
+				font-size: var(--font-l);;
+				line-height: var(--line-l);
 				font-weight: 300;
 				margin-top:  var(--space-xl);
 				margin-bottom: var(--space-m);
 			}
 			h3 {
-				font-size: 20px;
-				line-height: 33px;
+				font-size: var(--font-m);
+				line-height: var(--line-m);
 				font-weight: 300;
 				margin-top:  var(--space-l);
 				margin-bottom:  var(--space-s);
 			}
 			h4 {
-				font-size: 16px;
+				font-size: var(--font-s);
 				line-height: var(--space-l);
 				font-weight: 300;
 				margin-bottom: var(--space-xs);
@@ -153,9 +167,11 @@ const { title } = Astro.props;
 				padding: 0 1px;
 			}
 			small {
-				font-size: 13px;
-				line-height: 23px;
+				font-size: var(--font-xs);
+				line-height: var(--line-xs);
 			}
+
+			/* Utilities */
 
 			@media screen and (min-width: 768px) {
 				.headerOffset {
@@ -163,7 +179,8 @@ const { title } = Astro.props;
 				}
 			}
 
-			/* markdown article styles */
+			/* Layout */
+
 			@media screen and (min-width: 768px) {
 				.left-rail {
 					width: var(--left-rail-width);
@@ -173,30 +190,17 @@ const { title } = Astro.props;
 				}
 			}
 
+			/* Article */
+
 			.article {
 				margin-top: var(space-xl);
 			}
 			@media screen and (min-width: 768px) {
-				.article, 
-				.right-rail {
+				.article {
 					margin-top: 0;
 					margin-left: calc(var(--left-rail-width) + var(--padding-x));
 					max-width: var(--main-width);
 				}
-			}
-			@media screen and (min-width: 1260px) {
-				.right-rail {
-					width: calc(100% - var(--padding-x) - var(--left-rail-width) - var(--padding-x) - var(--main-width) - var(--padding-x) - var(--padding-x));
-					max-width: 400px;
-					overflow: scroll;
-					position: fixed;
-					top: var(--header-height);
-					right: var(--padding-x);
-				}
-
-			}
-			.guide-nav ul {
-				margin-left: 0;
 			}
 			.imageCredit {
 				display: block;
@@ -211,7 +215,7 @@ const { title } = Astro.props;
 			.article h2 {
 				margin-top: var(--space-xl);
 			} 
-			.article ul {
+			.article h1 + ul {
 				column-count: 2;
 				margin-bottom: 63px;
 				margin-top: 0;
@@ -219,7 +223,7 @@ const { title } = Astro.props;
 			}
 			@media screen and (min-width: 768px) {
 				.article ul {
-					margin-left: ;
+					margin-left: 0;
 				}
 			}
 			.article ul strong {

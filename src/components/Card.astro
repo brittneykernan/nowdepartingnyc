@@ -1,32 +1,14 @@
 ---
 import CardContent from "./CardContent.astro";
 
-interface Props {
-	height: number;
-	href: string;
-	title: string;
-  transitionName: string;
-	image: {
-    alt: string;
-    src: ImageMetadata;
-  }
-  hideTitle?: boolean;
-  comingSoon?: boolean;
-  responsive?: boolean;
-}
+const { comingSoon = false, href, responsive, transitionName, ...rest } = Astro.props;
 
-const { comingSoon = false, height, hideTitle = false, href, image, title, transitionName, responsive } = Astro.props;
 const contentProps = {
   comingSoon,
-  image,
-  height,
+  responsive,
   transitionName,
-  hideTitle,
-  title,
-  responsive
+  ...rest
 }
-
-console.log(href)
 
 ---
 <div class:list={["card-container", { responsive } ]} >
@@ -37,7 +19,7 @@ console.log(href)
     </div>
   :
     <a href={href} transition:name={`${transitionName}-card`} class="card-link">
-      <CardContent  {...contentProps} />
+      <CardContent {...contentProps} />
     </a>
   }
 </div>

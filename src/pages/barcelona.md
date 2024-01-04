@@ -2,6 +2,7 @@
 layout: ../layouts/Article.astro
 title: 'Barcelona - Intro & Hot Spot Map'
 slug: 'barcelona'
+urlPath: '/barcelona'
 guide: 'barcelona'
 pubDate: '2023-09-01'
 description: 'Travel tips tips for semi-bougie millenials living in NYC, who will be traveling to Barcelona in the month of September.'
@@ -51,7 +52,3 @@ loading="lazy"
 allowfullscreen
 referrerpolicy="no-referrer-when-downgrade"
 ></iframe>
-
-## Where to Start
-
-Perhaps start with [What to Wear in Barcelona In September](/barcelona/what-to-wear-in-barcelona-in-september) if you're a woman traveling around September. See the list to the right for more.

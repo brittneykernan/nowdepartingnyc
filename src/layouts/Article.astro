@@ -1,79 +1,100 @@
 ---
-import Layout from './Layout.astro';
+import Layout from "./Layout.astro";
+import { LocationMenuImages } from "../data/MenuImages";
 import Card from "../components/Card.astro";
-
-import { LocationMenuImages } from "../data/MenuImages"
 import Footer from "../components/Footer.astro";
-import InstagramLink from "../components/InstagramLink.astro";
-import TiktokLink from "../components/TikTokLink.astro";
+import NextUp from "../components/NextUp.astro";
+import Thanks from "../components/Thanks.astro";
 
-const { frontmatter : { title, slug, guide }} = Astro.props;
+const {
+  frontmatter: { title, guide, urlPath, description },
+} = Astro.props;
 
-const locationImage = LocationMenuImages[guide]
-const { artistName, url, alt } = locationImage
+const locationImage = LocationMenuImages[guide];
+const { artistName, url, alt } = locationImage;
 
-const postPath = `/src/pages/${guide}`;
-const allPosts = await Astro.glob(`../**/*.md`);
-const postsInGuide = allPosts.filter(post => post.file.includes(postPath));
+const articlePath = `/src/pages/${guide}`;
+const allArticles = await Astro.glob(`../**/*.md`);
+const articlesInGuide = allArticles.filter((article) =>
+  article.file.includes(articlePath)
+);
 
 const guideHref = `\\${guide}`;
-
 ---
+
 <Layout title={`${title} | Now Departing NYC`}>
-    <main class="headerOffset">
-        <div class="left-rail">
-            <Card
-                image={locationImage}
-                height={900}
-                href={guideHref}
-                title={title}
-                transitionName={guide}
-                hideTitle
-                responsive
-            />
-            { artistName && url &&
-                <small class="imageCredit"><a href={url} target="_blank" rel="nofollow noreferrer noopener">{alt}</a></small>
-            }
-        </div>
-        <article class="article">
-            <slot />
-            <h3> Thanks for reading</h3>
-            <p>
-                If you have corrections or suggestions, please DM me on social
-                <InstagramLink />
-                <TiktokLink />.
-            </p>
-            <p>I hope you find our recommendations useful. Our travel guides are meant to assist folks with similar interests and tastes as my husband and I, somewhat bougie, somewhat thrifty millennial DINKs with Brooklyn quality expectations, to find relevant travel information in one place.</p>
-        </article>
-        <nav class="right-rail">
-            { postsInGuide && 
-                <div class="guide-nav">
-                    <h3>In this guide</h5>
-                    <ul>
-                        {postsInGuide.map( ( { url, frontmatter: { title }}) => ( 
-                            <li><a href={url}>{title}</a></li>
-                        ))}
-                    </ul>
-                </div>
-            }
-            <Footer />
-        </nav>
-    </main>
+  <main class="headerOffset">
+    <div class="left-rail">
+      <Card
+        image={locationImage}
+        height={900}
+        href={guideHref}
+        title={title}
+        transitionName={guide}
+        hideTitle
+        responsive
+      />
+      {
+        artistName && url && (
+          <small class="imageCredit">
+            <a href={url} target="_blank" rel="nofollow noreferrer noopener">
+              {alt}
+            </a>
+          </small>
+        )
+      }
+    </div>
+    <article class="article">
+      <slot />
+
+      <h2>In this guide</h2>
+      <ul class="single-column">
+        {
+          articlesInGuide.map(
+            ({ url: articleURLPath, frontmatter: { title } }) => (
+              <li>
+                {articleURLPath === urlPath && (
+                  <span class="current-article-icon">&#10148;</span>
+                )}
+                <a href={articleURLPath}>{title}</a>
+              </li>
+            )
+          )
+        }
+      </ul>
+      <NextUp
+        image={locationImage}
+        title={"What to Wear in Barcelona in September"}
+        description={description}
+      />
+
+      <Thanks />
+    </article>
+  </main>
+  <Footer />
 </Layout>
 
 <style>
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--space-l);
+  }
+  @media screen and (min-width: 768px) {
     main {
-        display: flex;
-        flex-direction: column;
-        padding: 0 var(--space-l);
+      padding: 0 var(--space-xl);
     }
-    @media screen and (min-width: 768px) {
-        main {
-            padding: 0 var(--space-xl);
-        }
-    }
+  }
 </style>
 <script type="text/javascript">
-    // To open Mardown links in a new tab
-    !function(){for(var e=document.body.getElementsByTagName("a"),t=e.length,n=0;n<t;n++)new URL(e[n].href).origin!==location.origin&&e[n].setAttribute("target","_blank")}();
+  // To open Mardown links in a new tab
+  !(function () {
+    for (
+      var e = document.body.getElementsByTagName("a"), t = e.length, n = 0;
+      n < t;
+      n++
+    )
+      new URL(e[n].href).origin !== location.origin &&
+        e[n].setAttribute("target", "_blank");
+  })();
 </script>
