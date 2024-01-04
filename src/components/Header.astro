@@ -5,64 +5,92 @@ import PlaneIcon from "../components/PlaneIcon.astro";
 
 import profile from "../assets/profile.jpg";
 ---
+
 <header>
-	<h1 class="title">
-		<a href="/" title="Home">
-            Now Departing NYC
-            <span class="icon">
-                <PlaneIcon height="14" />
-            </span>
-        </a>
-	</h1>
-	<a href="https://www.instagram.com/brittneykernan" rel="noopener nofollow noreferrer" target="_blank" class="about" title="about">
-		<Image src={profile} height="200" alt="About" />
-	</a>
+  <h1 class="title">
+    <a href="/" title="Home">
+      Now Departing NYC
+      <span class="icon">
+        <PlaneIcon height="14" />
+      </span>
+    </a>
+  </h1>
+  <a
+    href="https://www.instagram.com/brittneykernan"
+    rel="noopener nofollow noreferrer"
+    target="_blank"
+    class="about"
+    title="about"
+  >
+    <Image src={profile} height="200" alt="About" />
+  </a>
 </header>
 <style>
+  header {
+    padding: var(--space-m) var(--space-l);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-m);
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
+  @media screen and (min-width: 768px) {
     header {
-        padding: var(--space-m) var(--space-l);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: var(--space-m);
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1;
+      position: fixed;
+      padding: var(--space-l) var(--space-xl) 0;
+      margin-bottom: var(--space-xl);
     }
-    @media screen and (min-width: 768px) {
-        header {
-            position: fixed;
-            padding: var(--space-l) var(--space-xl) 0;
-            margin-bottom: var(--space-xl);
-        }
-    }
-    .icon {
-        margin-left: var(--space-xxs)
+  }
+  .icon {
+    margin-left: var(--space-xxs);
+  }
+
+  .title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 3rem;
+    margin-bottom: 0;
+  }
+  .title a {
+    text-decoration: none;
+  }
+  .title:hover :global(svg) {
+    animation: 1s flyOut;
+  }
+  @keyframes flyOut {
+    0% {
+      transform: translate(0, 0);
+      opacity: 1;
     }
 
-    .title {
-        font-size: 1.3rem;
-        font-weight: 500;
-        margin-top: 0;
-        margin-bottom: 3rem;
-        margin-bottom: 0;
-    }
-    .title a {
-        text-decoration: none;
-    }
-    .title:hover PlaneIcon {
-        transform: translate(10px, 10px)
+    84% {
+      transform: translate(200px, -100px);
+      opacity: 0;
     }
 
-    .about img,
-    .about {
-        display: block;
+    85% {
+      transform: translate(-40px, 0);
+      opacity: 0;
     }
-    .about img {
-        height: var(--space-xl);
-        width: var(--space-xl);
-        border-radius: 100%;
-        margin-bottom: 0;
+
+    100% {
+      transform: translate(0, 0);
+      opacity: 1;
     }
+  }
+
+  .about img,
+  .about {
+    display: block;
+  }
+  .about img {
+    height: var(--space-xl);
+    width: var(--space-xl);
+    border-radius: 100%;
+    margin-bottom: 0;
+  }
 </style>
