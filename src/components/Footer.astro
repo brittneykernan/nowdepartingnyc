@@ -1,18 +1,23 @@
 ---
 import FooterContent from "./FooterContent.astro";
 ---
+
 <footer>
-	<FooterContent />
+  <FooterContent />
 </footer>
 <style>
-	footer {
-		padding: var(--space-l) var(--space-m);
-		text-align: center;
-	}
-	@media screen and (min-width: 768px) {
-		footer {
-			padding: var(--space-xl) var(--space-xl);
-			text-align: left;
-		}
-	}
+  footer {
+    padding: var(--space-l) var(--space-m);
+    text-align: center;
+  }
+  @media screen and (min-width: 768px) {
+    footer {
+      padding: var(--space-xl) var(--space-xl);
+      text-align: left;
+    }
+  }
+  footer :global(.social-icon) {
+    padding: var(--space-xs);
+    padding-left: 0;
+  }
 </style>

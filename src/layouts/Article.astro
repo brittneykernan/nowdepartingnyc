@@ -3,23 +3,36 @@ import Layout from "./Layout.astro";
 import { LocationMenuImages } from "../data/MenuImages";
 import Card from "../components/Card.astro";
 import Footer from "../components/Footer.astro";
+import ArticleList from "../components/ArticleList.astro";
 import NextUp from "../components/NextUp.astro";
 import Thanks from "../components/Thanks.astro";
+import type { Code, Debug } from "astro:components";
 
 const {
-  frontmatter: { title, guide, urlPath, description },
+  frontmatter: { title, guide, urlPath },
 } = Astro.props;
 
 const locationImage = LocationMenuImages[guide];
 const { artistName, url, alt } = locationImage;
 
 const articlePath = `/src/pages/${guide}`;
+const guideHref = `\\${guide}`;
+
 const allArticles = await Astro.glob(`../**/*.md`);
 const articlesInGuide = allArticles.filter((article) =>
   article.file.includes(articlePath)
 );
 
-const guideHref = `\\${guide}`;
+const nextArticle = articlesInGuide.find((_, index) => {
+  const lastArticle = articlesInGuide[articlesInGuide.length - 1].url;
+  const nextArticle = articlesInGuide[index - 1]?.url;
+  if (
+    urlPath === lastArticle || // if current is last article in list, return first article, which is first article tested
+    urlPath === nextArticle // otherwise return next article
+  ) {
+    return true;
+  } else return false;
+});
 ---
 
 <Layout title={`${title} | Now Departing NYC`}>
@@ -46,28 +59,8 @@ const guideHref = `\\${guide}`;
     </div>
     <article class="article">
       <slot />
-
-      <h2>In this guide</h2>
-      <ul class="single-column">
-        {
-          articlesInGuide.map(
-            ({ url: articleURLPath, frontmatter: { title } }) => (
-              <li>
-                {articleURLPath === urlPath && (
-                  <span class="current-article-icon">&#10148;</span>
-                )}
-                <a href={articleURLPath}>{title}</a>
-              </li>
-            )
-          )
-        }
-      </ul>
-      <NextUp
-        image={locationImage}
-        title={"What to Wear in Barcelona in September"}
-        description={description}
-      />
-
+      <ArticleList articles={articlesInGuide} currentURLPath={urlPath} />
+      <NextUp {...nextArticle} />
       <Thanks />
     </article>
   </main>
@@ -88,6 +81,7 @@ const guideHref = `\\${guide}`;
 </style>
 <script type="text/javascript">
   // To open Mardown links in a new tab
+  // todo: add norel no referrer
   !(function () {
     for (
       var e = document.body.getElementsByTagName("a"), t = e.length, n = 0;

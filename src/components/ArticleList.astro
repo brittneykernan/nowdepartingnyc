@@ -1,0 +1,17 @@
+---
+const { articles, currentURLPath } = Astro.props;
+---
+
+<h2>In this guide</h2>
+<ul class="single-column">
+  {
+    articles.map(({ url: articleURLPath, frontmatter: { title } }) => (
+      <li>
+        {articleURLPath === currentURLPath && (
+          <span class="current-article-icon">&#9992;</span>
+        )}
+        <a href={articleURLPath}>{title}</a>
+      </li>
+    ))
+  }
+</ul>
