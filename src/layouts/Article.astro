@@ -1,4 +1,5 @@
 ---
+import { AppConfig } from "../utils/AppConfig";
 import Layout from "./Layout.astro";
 import { LocationMenuImages } from "../data/MenuImages";
 import Card from "../components/Card.astro";
@@ -8,8 +9,12 @@ import NextUp from "../components/NextUp.astro";
 import Thanks from "../components/Thanks.astro";
 
 const {
-  frontmatter: { title, guide, urlPath },
+  frontmatter: { description, guide, ogImage: ogImgPath, title, urlPath },
 } = Astro.props;
+
+const { title: siteTitle, url: siteUrl } = AppConfig;
+const ogTitle = `${title} | ${siteTitle}`;
+const ogImage = `${siteUrl}${ogImgPath}`;
 
 const locationImage = LocationMenuImages[guide];
 const { artistName, url, alt } = locationImage;
@@ -34,7 +39,7 @@ const nextArticle = articlesInGuide.find((_, index) => {
 });
 ---
 
-<Layout title={`${title} | Now Departing NYC`}>
+<Layout title={ogTitle} description={description} ogImage={ogImage}>
   <main class="headerOffset">
     <div class="left-rail">
       <Card

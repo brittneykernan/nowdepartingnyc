@@ -1,17 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-
 import { LocationMenuItems } from "../data/MenuItems.js";
 import Footer from "../components/Footer.astro";
+import { AppConfig } from "../utils/AppConfig";
 
 // import { Image } from "astro:assets";
 // import sagImage from "../assets/duncan-kidd-_w0ETDhqEBc-unsplash.jpg";
 // import florImage from "../assets/gabriela-testa-8Y6-Ewhp2g8-unsplash.jpg";
+
+const { title: siteTitle, description, ogImage } = AppConfig;
+const title = `Home | ${siteTitle}`;
 ---
 
-<Layout title="Home | Now Departing">
-  <p>Travel with me to</p>
+<Layout title={title} description={description} ogImage={ogImage}>
+  <p>Travel with me, a semi-bougie Brooklynite Millenial, to</p>
   <section class="full-width-scrollable">
     <ul>
       {

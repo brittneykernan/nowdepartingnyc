@@ -6,10 +6,8 @@ urlPath: "/barcelona/"
 guide: "barcelona"
 pubDate: "2023-09-01"
 description: "Travel tips tips for semi-bougie millenials living in NYC, who will be traveling to Barcelona in the month of September."
+ogImage: "og-barcelona.jpg"
 author: "Brittney Kernan"
-image:
-  url: "https://docs.astro.build/assets/full-logo-light.png"
-  alt: ""
 tags: ["barcelona", "travel guide", "september"]
 ---
 
