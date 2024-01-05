@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nowdeparting.nyc/sitemap-index.xml
+Sitemap: https://www.nowdeparting.nyc/sitemap-index.xml

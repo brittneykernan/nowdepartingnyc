@@ -7,12 +7,15 @@ import "@fontsource/montserrat/500.css";
 import "@fontsource/montserrat/600.css";
 
 import { ViewTransitions } from "astro:transitions";
-
 import { SEO } from "astro-seo";
 
+import { AppConfig } from "../utils/AppConfig";
 import Header from "../components/Header.astro";
 
 const { title, description, ogImage } = Astro.props;
+const { gtmID, twitterHandle } = AppConfig;
+
+const gtmSRC = `https://www.googletagmanager.com/gtag/js?id=${gtmID}`
 
 ---
 
@@ -31,7 +34,7 @@ const { title, description, ogImage } = Astro.props;
 				}
 			}}
 			twitter={{
-				creator: "@brittneykernan"
+				creator: twitterHandle
 			}}
 			extend={{
 				// extending the default link tags
@@ -53,7 +56,7 @@ const { title, description, ogImage } = Astro.props;
 		<ViewTransitions />
 	</head>
 	<!-- Google tag (gtag.js) -->
-	<script is:inline src="https://www.googletagmanager.com/gtag/js?id=G-SS7Y3ZEB5P"></script>
+	<script is:inline src={gtmSRC}></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}

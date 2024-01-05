@@ -11,5 +11,7 @@ export const AppConfig = {
   locale_region: 'en-us',
   locale: 'en',
   instagram: 'https://www.instagram.com/brittneykernan',
-  tiktok: 'https://www.tiktok.com/@brittneykernan'
+  tiktok: 'https://www.tiktok.com/@brittneykernan',
+  twitterHandle: '@brittneykernan',
+  gtmID: 'G-SS7Y3ZEB5P'
 };
