@@ -2,11 +2,13 @@
 import TikTokIcon from "./TikTokIcon.astro";
 import { AppConfig } from "../utils/AppConfig";
 
-const url = AppConfig.tiktok
+const url = AppConfig.tiktok;
 ---
+
 <a
-	class="social-icon"
-	href={url}
-	target="_blank"
-	rel="nofollow noreferrer noopener"
-><TikTokIcon /></a>
+  class="social-icon"
+  href={url}
+  target="_blank"
+  title="Visit my TikTok"
+  rel="nofollow noreferrer noopener"><TikTokIcon /></a
+>

@@ -2,7 +2,7 @@
 const { articles, currentURLPath } = Astro.props;
 ---
 
-<h2>In this guide</h2>
+<h3>In this guide</h3>
 <ul>
   {
     articles.map(({ url: articleURLPath, frontmatter: { title } }) => (

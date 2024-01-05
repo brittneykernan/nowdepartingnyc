@@ -57,7 +57,7 @@ const milan = {
 }
 
 const switzerland = {
-    title: "A Train Trip",
+    title: "Scenic Rail",
     subtitle: "Switzerland",
     slug: "switzerland",
     image: LocationMenuImages.swissImage,
