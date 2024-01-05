@@ -2,7 +2,7 @@
 layout: ../../layouts/Article.astro
 title: "What to Wear in Barcelona In September"
 slug: "what-to-wear-in-barcelona-in-september"
-urlPath: "/barcelona/what-to-wear-in-barcelona-in-september"
+urlPath: "/barcelona/what-to-wear-in-barcelona-in-september/"
 guide: "barcelona"
 pubDate: "2023-09-01"
 description: "Some fit tips for semi-bougie women millenials living in NYC, who will be traveling to Barcelona in the month of September."
@@ -13,7 +13,7 @@ image:
 tags: ["barcelona", "what to wear", "september"]
 ---
 
-A travel guide for [Barcelona, Spain](/barcelona)
+A travel guide for [Barcelona, Spain](/barcelona/)
 
 ## What to Wear in Barcelona In September
 
@@ -21,7 +21,7 @@ First off, Barcelona is a stylish place. You're going to want to leave your incl
 
 Before I fully realized this by strolling [La Rambla](https://shopstyle.it/l/b6gVy), I reached out to my beautiful Barcelonean friend Tatiana for style guidance:
 
-> "honestly, the style is just as eclectic as in brooklyn just more … euro? i would say, pack what makes you feel cool and fit and you'll look 🔥." - [Tatiana Peck](#)
+> "honestly, the style is just as eclectic as in brooklyn just more … euro? i would say, pack what makes you feel cool and fit and you'll look 🔥." - [Tatiana Peck](https://www.instagram.com/tatianapeck/)
 
 Also importantly, the weather in September supports great outfits and hair days. With highs in the high 70s and lows in the high 60s, you won't be too hot or too cold. Chances of rain are low, but possible.
 

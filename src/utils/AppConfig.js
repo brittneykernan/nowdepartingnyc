@@ -1,5 +1,5 @@
 export const AppConfig = {
-  domain: 'nowdeparting.nyc',
+  domain: 'www.nowdeparting.nyc',
   site_name: 'Now Departing NYC',
   title: 'Now Departing NYC',
   description:

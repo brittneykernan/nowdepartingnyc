@@ -2,7 +2,7 @@
 layout: ../layouts/Article.astro
 title: "Barcelona - Intro & Hot Spot Map"
 slug: "barcelona"
-urlPath: "/barcelona"
+urlPath: "/barcelona/"
 guide: "barcelona"
 pubDate: "2023-09-01"
 description: "Travel tips tips for semi-bougie millenials living in NYC, who will be traveling to Barcelona in the month of September."

@@ -11,25 +11,29 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Home | Now Departing">
-	<p>Travel with me to</p>
-	<section class="full-width-scrollable">
-		<ul>
-			{LocationMenuItems.map(({image, slug, title, subtitle, comingSoon }) => (
-				<li>
-					<Card
-						image={image}
-						height={900}
-						href={`/${slug}`}
-						title={title}
-						subtitle={subtitle}
-						transitionName={slug}
-						comingSoon={comingSoon}
-					/>
-				</li>
-			))}
-		</ul>
-	</section>
-	<!-- <section class="full-width-scrollable">
+  <p>Travel with me to</p>
+  <section class="full-width-scrollable">
+    <ul>
+      {
+        LocationMenuItems.map(
+          ({ image, slug, title, subtitle, comingSoon }) => (
+            <li>
+              <Card
+                image={image}
+                height={900}
+                href={`/${slug}/`}
+                title={title}
+                subtitle={subtitle}
+                transitionName={slug}
+                comingSoon={comingSoon}
+              />
+            </li>
+          )
+        )
+      }
+    </ul>
+  </section>
+  <!-- <section class="full-width-scrollable">
 		<h2>By interest</h2>
 		<ul>
 			<li>
@@ -81,49 +85,48 @@ import Footer from "../components/Footer.astro";
 				<h3>Boutiques</h3>
 			</li>
 		</ul> -->
-	</section>
-	<Footer />
 </Layout>
+<Footer />
 
 <style>
-	.full-width-scrollable {
-		width: 100%;
-		overflow: scroll;
-	}
-	p {
-		padding-left: var(--space-l);
-		margin: var(--space-m) 0;
-	}
-	@media screen and (min-width: 768px) {
-		p {
-			padding-left: var(--space-xl);
-		}
-	}
-	ul {
-		display: flex;
-		margin: 0;
-		padding-left: var(--space-l);
-	}
-	@media screen and (min-width: 768px) {
-		ul {
-			padding-left: var(--space-xl);
-		}
-	}
-	li {
-		padding-right: var(--space-l);
-	}
-	@media screen and (min-width: 768px) {
-		li {
-			padding-right: var(--space-xl);
-		}
-	}
-	li a {
-		text-decoration: none;
-	}
-	li img {
-		height: 450px;
-		width: auto;
-		display: block;
-		box-shadow: 1.5rem 1rem 2rem rgba(0, 0, 0, 0.25);
-	}
+  .full-width-scrollable {
+    width: 100%;
+    overflow: scroll;
+  }
+  p {
+    padding-left: var(--space-l);
+    margin: var(--space-m) 0;
+  }
+  @media screen and (min-width: 768px) {
+    p {
+      padding-left: var(--space-xl);
+    }
+  }
+  ul {
+    display: flex;
+    margin: 0;
+    padding-left: var(--space-l);
+  }
+  @media screen and (min-width: 768px) {
+    ul {
+      padding-left: var(--space-xl);
+    }
+  }
+  li {
+    padding-right: var(--space-l);
+  }
+  @media screen and (min-width: 768px) {
+    li {
+      padding-right: var(--space-xl);
+    }
+  }
+  li a {
+    text-decoration: none;
+  }
+  li img {
+    height: 450px;
+    width: auto;
+    display: block;
+    box-shadow: 1.5rem 1rem 2rem rgba(0, 0, 0, 0.25);
+  }
 </style>

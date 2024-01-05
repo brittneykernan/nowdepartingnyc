@@ -15,7 +15,7 @@ const locationImage = LocationMenuImages[guide];
 const { artistName, url, alt } = locationImage;
 
 const articlePath = `/src/pages/${guide}`;
-const guideHref = `\\${guide}`;
+const guideHref = `\\${guide}\\`;
 
 const allArticles = await Astro.glob(`../**/*.md`);
 const articlesInGuide = allArticles.filter((article) =>
