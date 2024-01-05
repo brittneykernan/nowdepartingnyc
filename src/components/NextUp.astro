@@ -5,13 +5,14 @@ import { LocationMenuImages } from "../data/MenuImages";
 
 const {
   frontmatter: { title, guide, description },
+  url,
 } = Astro.props;
 
 const locationImage = LocationMenuImages[guide];
 ---
 
 <h2>Next Up</h2>
-<a class="link" href="#">
+<a class="link" href={url}>
   <Image class="image" {...locationImage} />
   <div class="content">
     <h3 class="title">{title}</h3>

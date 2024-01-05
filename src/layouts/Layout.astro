@@ -193,7 +193,7 @@ const { title } = Astro.props;
 			/* Article */
 
 			.article {
-				margin-top: var(space-xl);
+				margin-top: var(--space-xl);
 			}
 			@media screen and (min-width: 768px) {
 				.article {
@@ -216,16 +216,19 @@ const { title } = Astro.props;
 				margin-top: var(--space-xl);
 			} 
 			.article h1 + ul {
-				column-count: 2;
 				margin-bottom: 63px;
 				margin-top: 0;
 				margin-left: 0;
 			}
 			@media screen and (min-width: 768px) {
-				.article ul {
-					margin-left: 0;
+				.article h1 + ul {
+					column-count: 2;
 				}
 			}
+			.article ul {
+				margin-left: 0;
+			}
+			
 			.article ul strong {
 				font-weight: 500;
 			}

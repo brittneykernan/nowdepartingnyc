@@ -6,7 +6,6 @@ import Footer from "../components/Footer.astro";
 import ArticleList from "../components/ArticleList.astro";
 import NextUp from "../components/NextUp.astro";
 import Thanks from "../components/Thanks.astro";
-import type { Code, Debug } from "astro:components";
 
 const {
   frontmatter: { title, guide, urlPath },
@@ -79,16 +78,10 @@ const nextArticle = articlesInGuide.find((_, index) => {
     }
   }
 </style>
-<script type="text/javascript">
-  // To open Mardown links in a new tab
-  // todo: add norel no referrer
-  !(function () {
-    for (
-      var e = document.body.getElementsByTagName("a"), t = e.length, n = 0;
-      n < t;
-      n++
-    )
-      new URL(e[n].href).origin !== location.origin &&
-        e[n].setAttribute("target", "_blank");
-  })();
+<script>
+  import { optimizeExternalLinks } from "../utils/utils.js";
+
+  optimizeExternalLinks();
+
+  document.addEventListener("astro:after-swap", optimizeExternalLinks);
 </script>
