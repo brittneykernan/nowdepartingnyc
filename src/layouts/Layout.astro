@@ -182,7 +182,14 @@ const { title, description, ogImage } = Astro.props;
 				border-left: 1px solid #ddd;
 				padding: 0 1rem;
 				color: #828282;
+				margin-left: 0;
 			}
+			@media screen and (min-width: 768px) {
+				blockquote {
+					margin-left: 40px;
+				}
+			}
+
 			sub,
 			sup {
 				line-height: 0.5em;
