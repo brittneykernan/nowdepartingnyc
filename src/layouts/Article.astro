@@ -93,41 +93,43 @@ const nextArticle = articlesInGuide.find((_, index) => {
       max-width: var(--main-width);
     }
   }
-  .article :global(p:first-child) {
+  .imageCredit {
+    display: block;
+    margin-top: var(--space-s);
+  }
+</style>
+<style is:global>
+  .article p:first-child {
     margin: 0;
   }
-  .article :global(h2) {
+  .article h2 {
     margin-top: 5px;
   }
-  .article :global(h2:first-of-type + ul) {
+  .article h2:first-of-type + ul {
     margin-bottom: 63px;
     margin-top: 0;
     margin-left: 0;
   }
   @media screen and (min-width: 768px) {
-    .article :global(h2:first-of-type + ul) {
+    .article h2:first-of-type + ul {
       column-count: 2;
     }
   }
-  .article :global(ul) {
+  .article ul {
     margin-left: 0;
   }
 
-  .article :global(ul strong) {
+  .article ul strong {
     font-weight: 500;
   }
 
-  .article :global(iframe) {
+  .article iframe {
     width: 100%;
   }
   @media screen and (min-width: 768px) {
-    .article :global(iframe) {
+    .article iframe {
       width: var(--main-width);
     }
-  }
-  .imageCredit {
-    display: block;
-    margin-top: var(--space-s);
   }
 </style>
 <script>
