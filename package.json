@@ -7,6 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "lint": "eslint --ext .js,.astro,.ts,.tsx src --config .eslintrc",
     "astro": "astro"
   },
   "dependencies": {
@@ -14,5 +15,11 @@
     "@fontsource/montserrat": "^5.0.8",
     "astro": "^3.1.4",
     "astro-seo": "^0.8.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^6.18.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-astro": "^0.31.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0"
   }
 }
