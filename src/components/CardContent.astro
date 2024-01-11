@@ -14,17 +14,18 @@ const {
 
 <div class:list={[{ "coming-soon": comingSoon }]}>
   <Image
+    class={"image"}
     src={src}
     height={height}
     alt={alt}
     transition:name=`${transitionName}-image`
   />
   <h2
-    class:list={["card-title", { hide: hideTitle, comingSoon: comingSoon }]}
+    class:list={["title", { hide: hideTitle, comingSoon: comingSoon }]}
     transition:name=`${transitionName}-title`
   >
     {title},
-    <span class="card-subtitle">{subtitle}</span>
+    <span class="subtitle">{subtitle}</span>
   </h2>
 </div>
 
@@ -32,7 +33,7 @@ const {
   .coming-soon {
     opacity: 0.5;
   }
-  .card-title {
+  .title {
     margin: var(--space-l) 0 0 -5px;
     display: flex;
     flex-direction: column;
@@ -40,17 +41,17 @@ const {
     line-height: var(--line-l);
     font-weight: 300;
   }
-  .card-title.hide {
+  .title.hide {
     display: none;
   }
-  .card-subtitle {
+  .subtitle {
     font-size: var(--font-s);
     line-height: var(--line-s);
     font-weight: 500;
     margin-left: 4px;
   }
 
-  img {
+  .image {
     height: auto;
     width: 100%;
     display: block;
@@ -59,7 +60,7 @@ const {
     transition: transform 0.5s;
   }
   @media screen and (min-width: 768px) {
-    img {
+    .image {
       min-width: 100%;
     }
   }

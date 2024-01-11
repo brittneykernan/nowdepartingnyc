@@ -2,19 +2,20 @@
 import InstagramLink from "../components/InstagramLink.astro";
 import TikTokLink from "../components/TikTokLink.astro";
 ---
-<div>
-    <p>&copy; 2024 Brittney Kernan. All Rights Reserved.</p>
-    <p>
-        <InstagramLink />
-        <TikTokLink />
-    </p>
+
+<div class="container">
+  <p class="content">&copy; 2024 Brittney Kernan. All Rights Reserved.</p>
+  <p class="content">
+    <InstagramLink />
+    <TikTokLink />
+  </p>
 </div>
 <style>
-    div {
-        font-size: 13px;
-        line-height: 23px;
-    }
-    p {
-        margin: 7px 0;
-    }
+  .container {
+    font-size: 13px;
+    line-height: 23px;
+  }
+  .content {
+    margin: 7px 0;
+  }
 </style>

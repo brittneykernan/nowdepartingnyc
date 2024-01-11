@@ -22,7 +22,12 @@ import profile from "../assets/profile.jpg";
     class="about"
     title="Visit the author on Instagram"
   >
-    <Image src={profile} height="200" alt="Visit the author on Instagram" />
+    <Image
+      class="avatar"
+      src={profile}
+      height="200"
+      alt="Visit the author on Instagram"
+    />
   </a>
 </header>
 <style>
@@ -83,11 +88,11 @@ import profile from "../assets/profile.jpg";
     }
   }
 
-  .about img,
+  .about .avatar,
   .about {
     display: block;
   }
-  .about img {
+  .about .avatar {
     height: var(--space-xl);
     width: var(--space-xl);
     border-radius: 100%;
