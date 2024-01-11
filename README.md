@@ -1,6 +1,6 @@
 # Now Departing NYC: A Simple Travel Blog with Astro
 
-No TypeScript, PostCSS, TailwindCSS, React, or CMS. Don't need 'em yet.
+No TypeScript, PostCSS, TailwindCSS, React, or CMS. Don't need 'em, yet.
 
 ## 🚀 Project Structure
 
@@ -28,7 +28,10 @@ No TypeScript, PostCSS, TailwindCSS, React, or CMS. Don't need 'em yet.
 │   ├── utils/
 │   │   ├── AppConfig.mjs
 │   │   └── utils.mjs
-└── package.json
+├── .eslintrc
+├── astro.config.mjs
+├── package.json
+└── README.md
 ```
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.

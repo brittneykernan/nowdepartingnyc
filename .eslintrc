@@ -15,7 +15,7 @@
       // Parse the script in `.astro` as TypeScript by adding the following configuration.
       // It's the setting you need when using TypeScript.
       "parserOptions": {
-        "parser": "@typescript-eslint/parser",
+        "parser": "@typescript-eslint/parser", // this prevents Parsing error: Cannot use keyword 'await' outside an async function, couldn't find a better solve
         "extraFileExtensions": [".astro"],
         "sourceType": "module",
         "ecmaVersion": 2020
