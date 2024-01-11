@@ -1,7 +1,7 @@
 ---
-import { AppConfig } from "../utils/AppConfig";
+import { AppConfig } from "../utils/AppConfig.mjs";
 import Layout from "./Layout.astro";
-import { LocationMenuImages } from "../data/MenuImages";
+import { LocationMenuImages } from "../data/MenuImages.mjs";
 import Card from "../components/Card.astro";
 import Footer from "../components/Footer.astro";
 import ArticleList from "../components/ArticleList.astro";
@@ -133,7 +133,7 @@ const nextArticle = articlesInGuide.find((_, index) => {
   }
 </style>
 <script>
-  import { optimizeExternalLinks } from "../utils/utils.js";
+  import { optimizeExternalLinks } from "../utils/utils.mjs";
 
   optimizeExternalLinks();
 

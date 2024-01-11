@@ -60,13 +60,12 @@ Likes on Upsplash
 
 ## Todo Blog Posts
 
-* Cool Boutiques in Barcelona
-* Barcelona's Best Skate Shops
-* Curated Book & Magazine Stores in Barcelona
-* Exceptional Restaurants in Barcelona
-* Must-Try Desserts in Barcelona
-* A Day in Gothic Quarter, Barcelona, Self-Guided Walking Tour
-* A Day in Eixample, Barcelona, Self-Guided Walking Tour
-* Must See Architecture and Art in Barcelona
-* Top 10 Must-Knows Before You Visit Barcelona
-
+- Cool Boutiques in Barcelona
+- Barcelona's Best Skate Shops
+- Curated Book & Magazine Stores in Barcelona
+- Exceptional Restaurants in Barcelona
+- Must-Try Desserts in Barcelona
+- A Day in Gothic Quarter, Barcelona, Self-Guided Walking Tour
+- A Day in Eixample, Barcelona, Self-Guided Walking Tour
+- Must See Architecture and Art in Barcelona
+- Top 10 Must-Knows Before You Visit Barcelona

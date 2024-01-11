@@ -1,85 +1,85 @@
 :root {
-    --body-copy: #333;
-    --padding-x: var(--space-xl);
-    --header-height: 128px;
-    --main-width: 680px;
-    --left-rail-width: 22vw;
+  --body-copy: #333;
+  --padding-x: var(--space-xl);
+  --header-height: 128px;
+  --main-width: 680px;
+  --left-rail-width: 22vw;
 
-    /** From Golden Ratio CSS from https://grtcalculator.com/ */
-    --space-xl: 45px;
-    --space-l: 28px;
-    --space-m: 17px;
-    --space-s: 11px;
-    --space-xs: 7px;
-    --space-xxs: 4px;
-    
-    --font-xl: 42px;
-    --font-l: 26px;
-    --font-m: 20px;
-    --font-s: 16px;
-    --font-xs: 13px;
-    --font-xxs: 11px;
-    
-    --line-xl: 55px;
-    --line-l: var(--font-xl);
-    --line-m: 33px;
-    --line-s: var(--space-l);
-    --line-xs: 23px;
-    --line-xxs: var(--space-s);
+  /** From Golden Ratio CSS from https://grtcalculator.com/ */
+  --space-xl: 45px;
+  --space-l: 28px;
+  --space-m: 17px;
+  --space-s: 11px;
+  --space-xs: 7px;
+  --space-xxs: 4px;
+
+  --font-xl: 42px;
+  --font-l: 26px;
+  --font-m: 20px;
+  --font-s: 16px;
+  --font-xs: 13px;
+  --font-xxs: 11px;
+
+  --line-xl: 55px;
+  --line-l: var(--font-xl);
+  --line-m: 33px;
+  --line-s: var(--space-l);
+  --line-xs: 23px;
+  --line-xxs: var(--space-s);
 }
 html {
-    font-family: "Montserrat", sans-serif;
-    background: #fefefe;
-    color: var(--body-copy);
-    font-size: var(--font-s);
-    line-height: var(--space-l);
+  font-family: "Montserrat", sans-serif;
+  background: #fefefe;
+  color: var(--body-copy);
+  font-size: var(--font-s);
+  line-height: var(--space-l);
 }
 body {
-    margin: 0;
+  margin: 0;
 }
 a {
-    color: var(--body-copy);
+  color: var(--body-copy);
 }
 ul {
-    padding-left: 0;
-    list-style: none;
+  padding-left: 0;
+  list-style: none;
 }
 
 /** From Golden Ratio CSS from https://grtcalculator.com/ */
 /* h1 { font-size: 33px; line-height: 53px;  font-weight: 500; margin-top: 45px; margin-bottom: var(--space-l); } */
 h2 {
-    font-size: var(--font-xl);
-    line-height: var(--line-xl);
-    font-weight: 300;
-    margin-top: 0;
-    margin-bottom: var(--space-l);
+  font-size: var(--font-xl);
+  line-height: var(--line-xl);
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: var(--space-l);
 }
 h3 {
-    font-size: var(--font-l);;
-    line-height: var(--line-l);
-    font-weight: 300;
-    margin-top:  var(--space-xl);
-    margin-bottom: var(--space-m);
+  font-size: var(--font-l);
+  line-height: var(--line-l);
+  font-weight: 300;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-m);
 }
 h4 {
-    font-size: var(--font-m);
-    line-height: var(--line-m);
-    font-weight: 300;
-    margin-top:  var(--space-l);
-    margin-bottom:  var(--space-s);
+  font-size: var(--font-m);
+  line-height: var(--line-m);
+  font-weight: 300;
+  margin-top: var(--space-l);
+  margin-bottom: var(--space-s);
 }
 h5 {
-    font-size: var(--font-s);
-    line-height: var(--space-l);
-    font-weight: 300;
-    margin-bottom: var(--space-xs);
+  font-size: var(--font-s);
+  line-height: var(--space-l);
+  font-weight: 300;
+  margin-bottom: var(--space-xs);
 }
 
 h1 + h2,
 h2 + h3,
 h2:first-of-type,
 h3:first-of-type {
-    margin-top: 0;
+  margin-top: 0;
 }
 p,
 ul,
@@ -90,62 +90,62 @@ img,
 .callout,
 .caption,
 .footnotes {
-    margin-bottom: var(--space-l);
+  margin-bottom: var(--space-l);
 }
 ul,
 ol {
-    margin-left: var(--space-l);
+  margin-left: var(--space-l);
 }
 ul ul,
 ul ol,
 ol ul,
 ol ol {
-    margin-top: var(--space-s);
-    margin-bottom: 0;
-    margin-left: var(--space-m);
+  margin-top: var(--space-s);
+  margin-bottom: 0;
+  margin-left: var(--space-m);
 }
 li {
-    margin-bottom: var(--space-s);
+  margin-bottom: var(--space-s);
 }
 blockquote {
-    font-style: italic;
-    border-left: 1px solid #ddd;
-    padding: 0 1rem;
-    color: #828282;
-    margin-left: 0;
+  font-style: italic;
+  border-left: 1px solid #ddd;
+  padding: 0 1rem;
+  color: #828282;
+  margin-left: 0;
 }
 @media screen and (min-width: 768px) {
-    blockquote {
-        margin-left: 40px;
-    }
+  blockquote {
+    margin-left: 40px;
+  }
 }
 
 sub,
 sup {
-    line-height: 0.5em;
-    color: #828282;
-    padding: 0 1px;
+  line-height: 0.5em;
+  color: #828282;
+  padding: 0 1px;
 }
 small {
-    font-size: var(--font-xs);
-    line-height: var(--line-xs);
+  font-size: var(--font-xs);
+  line-height: var(--line-xs);
 }
 
 /* Utilities */
 
 @media screen and (min-width: 768px) {
-    .headerOffset {
-        margin-top: var(--header-height);
-    }
+  .headerOffset {
+    margin-top: var(--header-height);
+  }
 }
 
 /* Layout */
 
 @media screen and (min-width: 768px) {
-    .left-rail {
-        width: var(--left-rail-width);
-        position: fixed;
-        top: var(--header-height);
-        left: var(--padding-x);
-    }
+  .left-rail {
+    width: var(--left-rail-width);
+    position: fixed;
+    top: var(--header-height);
+    left: var(--padding-x);
+  }
 }

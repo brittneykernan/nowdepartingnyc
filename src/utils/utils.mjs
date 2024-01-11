@@ -5,6 +5,6 @@ export const optimizeExternalLinks = () => {
     n++
   )
     new URL(e[n].href).origin !== location.origin &&
-      e[n].setAttribute("target", "_blank") && e[n].setAttribute("rel", "nofollow");
+      e[n].setAttribute("target", "_blank") &&
+      e[n].setAttribute("rel", "nofollow");
 };
-
