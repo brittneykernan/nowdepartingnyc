@@ -7,9 +7,9 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "astro": "astro",
     "lint": "eslint --ext .js,.astro src --config .eslintrc",
-    "format": "prettier --write .",
-    "astro": "astro"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.0.4",
