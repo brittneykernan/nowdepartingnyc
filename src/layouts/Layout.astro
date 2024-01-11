@@ -55,6 +55,7 @@ const gtmSRC = `https://www.googletagmanager.com/gtag/js?id=${gtmID}`;
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <ViewTransitions />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
     <script is:inline src={gtmSRC}></script>
     <script is:inline id="gtmConfigScript" data-gtmID={gtmID}>
       window.dataLayer = window.dataLayer || [];
@@ -70,8 +71,6 @@ const gtmSRC = `https://www.googletagmanager.com/gtag/js?id=${gtmID}`;
       gtag("config", gtmID);
     </script></head
   >
-  <!-- Google tag (gtag.js) -->
-
   <body>
     <Header />
     <div class="headerOffset">

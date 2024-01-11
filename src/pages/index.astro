@@ -5,10 +5,6 @@ import { LocationMenuItems } from "../data/MenuItems.mjs";
 import Footer from "../components/Footer.astro";
 import { AppConfig } from "../utils/AppConfig.mjs";
 
-// import { Image } from "astro:assets";
-// import sagImage from "../assets/duncan-kidd-_w0ETDhqEBc-unsplash.jpg";
-// import florImage from "../assets/gabriela-testa-8Y6-Ewhp2g8-unsplash.jpg";
-
 const { title: siteTitle, description, ogImage } = AppConfig;
 const title = `Home | ${siteTitle}`;
 ---
@@ -19,12 +15,13 @@ const title = `Home | ${siteTitle}`;
     <ul>
       {
         LocationMenuItems.map(
-          ({ image, slug, title, subtitle, comingSoon }) => (
+          ({ image, slug, title, subtitle, comingSoon }, index) => (
             <li>
               <Card
                 image={image}
                 height={900}
                 href={`/${slug}/`}
+                loading={index > 0 ? "lazy" : "eager"}
                 title={title}
                 subtitle={subtitle}
                 transitionName={slug}
@@ -36,58 +33,6 @@ const title = `Home | ${siteTitle}`;
       }
     </ul>
   </section>
-  <!-- <section class="full-width-scrollable">
-		<h2>By interest</h2>
-		<ul>
-			<li>
-				<Image
-					src={sagImage}
-					height="900"
-					alt="Sagrada Familia by Duncan Kidd"
-				/>
-				<h3>Architecture</h3>
-			</li>
-			<li>
-				<Image
-					src={florImage}
-					height="900"
-					alt="Sagrada Familia by Gabriela Testa"
-				/>
-				<h3>Flora</h3>
-			</li>
-			<li>
-				<Image
-					src={sagImage}
-					height="900"
-					alt="Sagrada Familia by Duncan Kidd"
-				/>
-				<h3>Dessert Tours</h3>
-			</li>
-			<li>
-				<Image
-					src={sagImage}
-					height="900"
-					alt="Sagrada Familia by Duncan Kidd"
-				/>
-				<h3>Fine Dining</h3>
-			</li>
-			<li>
-				<Image
-					src={sagImage}
-					height="900"
-					alt="Sagrada Familia by Duncan Kidd"
-				/>
-				<h3>Walking Tours</h3>
-			</li>
-			<li>
-				<Image
-					src={sagImage}
-					height="900"
-					alt="Sagrada Familia by Duncan Kidd"
-				/>
-				<h3>Boutiques</h3>
-			</li>
-		</ul> -->
 </Layout>
 <Footer />
 
