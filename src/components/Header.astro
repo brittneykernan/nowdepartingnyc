@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 
 import PlaneIcon from "../components/PlaneIcon.astro";
 
-import profile from "../assets/profile.jpg";
+import avatarImg from "../assets/profile-2x.jpg";
 ---
 
 <header>
@@ -23,10 +23,12 @@ import profile from "../assets/profile.jpg";
     title="Visit the author on Instagram"
   >
     <Image
-      class="avatar"
-      src={profile}
-      height="200"
       alt="Visit the author on Instagram"
+      class="avatar"
+      height="200"
+      sizes={`90px`}
+      src={avatarImg}
+      widths={[90]}
     />
   </a>
 </header>

@@ -56,7 +56,8 @@ const gtmSRC = `https://www.googletagmanager.com/gtag/js?id=${gtmID}`;
     <link rel="sitemap" href="/sitemap-index.xml" />
     <ViewTransitions />
     <link rel="preconnect" href="https://www.google-analytics.com" />
-    <script is:inline src={gtmSRC}></script>
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <script is:inline async src={gtmSRC}></script>
     <script is:inline id="gtmConfigScript" data-gtmID={gtmID}>
       window.dataLayer = window.dataLayer || [];
       const gtmID = document
