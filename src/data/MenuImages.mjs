@@ -8,6 +8,7 @@ import milSrc from "../assets/italy-2x.jpg";
 import willSrc from "../assets/brooklyn-2x.jpg";
 import sagSrc from "../assets/sagra-familia-2x.jpg";
 import florSrc from "../assets/jargim-2x.jpg";
+import celebSrc from "../assets/celebrity-2x.jpg";
 
 const barcelona = {
   src: barcSrc,
@@ -79,6 +80,13 @@ const florImage = {
   alt: "Florida by Gabriela Testa",
 };
 
+const celebImage = {
+  src: celebSrc,
+  artistName: "Corey Seeman",
+  url: "https://www.flickr.com/photos/cseeman/26266995477/in/photostream/",
+  alt: "Celebrity Equinox Ship",
+};
+
 export const LocationMenuImages = {
   barcelona,
   rioImage,
@@ -88,6 +96,7 @@ export const LocationMenuImages = {
   parImage,
   milImage,
   willImage,
+  celebImage,
 };
 
 export const CategoryMenuImages = {

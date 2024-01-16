@@ -4,6 +4,7 @@ title: "Barcelona - Intro & Hot Spot Map"
 slug: "barcelona"
 urlPath: "/barcelona/"
 guide: "barcelona"
+image: "barcelona"
 pubDate: "2023-09-01"
 description: "Travel tips tips for semi-bougie millenials living in NYC, who will be traveling to Barcelona in the month of September."
 ogImage: "og-barcelona.jpg"
@@ -24,7 +25,7 @@ A travel guide for
 - **Duration:** 9 days
 - **Year:** 2023
 
-### First Impression</h4>
+### First Impression
 
 Barcelona is a unique and stylish place. You're going to
 want to leave your inclination to blend in at home. Stop
