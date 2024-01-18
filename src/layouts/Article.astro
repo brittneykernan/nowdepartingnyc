@@ -145,9 +145,13 @@ console.log(`NextArticle`, nextArticle);
   }
 </style>
 <script>
-  import { optimizeExternalLinks } from "../utils/utils.mjs";
+  import { optimizeExternalLinks, loadMapIframes } from "../utils/utils.mjs";
 
-  optimizeExternalLinks();
+  const onSwap = () => {
+    optimizeExternalLinks();
+    loadMapIframes();
+  }
 
-  document.addEventListener("astro:after-swap", optimizeExternalLinks);
+  onSwap();
+  document.addEventListener("astro:after-swap", onSwap);
 </script>

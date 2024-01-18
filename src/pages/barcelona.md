@@ -43,7 +43,7 @@ We've curated our top picks of boutiques, restaurants,
 cultural destinations, skate shops, book and music stores, and coffee and dessert shops in Barcelona below.
 
 <iframe
-src="https://www.google.com/maps/d/u/0/embed?mid=1os2iIcn02sp3VBhO1XpAFaje79X7hAE&ehbc=2E312F&noprof=1"
+data-src="https://www.google.com/maps/d/u/0/embed?&ehbc=2E312F&noprof=1"
 width="600"
 height="450"
 style="border:0"
