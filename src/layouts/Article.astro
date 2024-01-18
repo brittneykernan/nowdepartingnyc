@@ -9,29 +9,20 @@ import NextUp from "../components/NextUp.astro";
 import Thanks from "../components/Thanks.astro";
 
 const {
-  frontmatter: {
-    description,
-    guide,
-    ogImage: ogImgPath,
-    title,
-    urlPath,
-    image,
-  },
+  frontmatter: { description, guide, ogImage: ogImgPath, title, urlPath },
 } = Astro.props;
 
 const { title: siteTitle, url: siteUrl } = AppConfig;
 const ogTitle = `${title} | ${siteTitle}`;
 const ogImage = `${siteUrl}${ogImgPath}`;
 
-const locationImage = LocationMenuImages[image];
+const locationImage = LocationMenuImages[guide];
 const { artistName, url, alt } = locationImage;
 
 const articlePath = `/src/pages/${guide}`;
 const guideHref = `\\${guide}\\`;
 
-const allArticles = await Astro.glob(`../**/*.md`).catch((error) =>
-  console.log(`Error`, error)
-);
+const allArticles = await Astro.glob(`../**/*.md`);
 const articlesInGuide = allArticles.filter((article) =>
   article.file.includes(articlePath)
 );
@@ -46,8 +37,6 @@ const nextArticle = articlesInGuide.find((_, index) => {
     return true;
   } else return false;
 });
-
-console.log(`NextArticle`, nextArticle);
 ---
 
 <Layout title={ogTitle} description={description} ogImage={ogImage}>
@@ -76,7 +65,7 @@ console.log(`NextArticle`, nextArticle);
     <article class="article">
       <slot />
       <ArticleList articles={articlesInGuide} currentURLPath={urlPath} />
-      {nextArticle && <NextUp {...nextArticle} />}
+      <NextUp {...nextArticle} />
       <Thanks />
     </article>
   </main>
